@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DDX Miami 2026 Report</title>
+<meta name="description" content="Conference report from DDX'26 Miami, 24–25 September 2026: what design and product leaders agreed on when every competitor runs on the same AI.">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;1,400;1,700&display=swap">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+:root{
+  --bg:#050505;--card:#0B0B0B;--surface:#0E0E0E;--surface-hi:#171717;
+  --line:#242424;--line-soft:#1A1A1A;
+  --accent:#FFF204;--accent-rgb:255,242,4;
+  --text:#ffffff;--text-dim:#9A9A9A;--text-faint:#5C5C5C;
+  --font:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --serif:Tinos,"Times New Roman",Times,serif;
+  --measure:1160px;--gutter:clamp(18px,4vw,64px);
+  color-scheme:dark;
+}
+html{scroll-behavior:smooth}
+html,body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--measure);margin:0 auto;padding:0 var(--gutter)}
+.eyebrow{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--accent)}
+.eyebrow i{display:inline-block;width:22px;height:2px;background:var(--accent)}
+.eyebrow span+span{color:rgba(255,255,255,.7)}
+h2{font-size:clamp(30px,4.6vw,54px);line-height:.98;letter-spacing:-.03em;font-weight:700;text-transform:uppercase;text-wrap:balance;margin-top:14px}
+.lead{font-size:clamp(17px,1.6vw,20px);line-height:1.5;color:rgba(255,255,255,.86);max-width:62ch}
+section{padding:clamp(56px,8vw,112px) 0;border-top:1px solid var(--line-soft)}
+section:first-of-type{border-top:0}
+.small{font-size:13px;color:var(--text-dim);line-height:1.5}
+
+/* masthead */
+.top{position:sticky;top:0;z-index:40;height:56px;background:rgba(5,5,5,.82);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid rgba(255,255,255,.08)}
+.top__in{max-width:var(--measure);margin:0 auto;height:100%;padding:0 var(--gutter);display:flex;align-items:center;gap:14px}
+.brand-mark{width:56px;height:auto}
+.top__title{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--text-dim);white-space:nowrap}
+.top nav{margin-left:auto;display:flex;gap:18px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-dim)}
+.top nav a{text-decoration:none}
+.top nav a:hover{color:var(--accent)}
+@media (max-width:760px){.top nav{display:none}}
+
+/* hero */
+.hero{position:relative;isolation:isolate;overflow:hidden;min-height:min(78vh,720px);display:flex;flex-direction:column;justify-content:flex-end;border-top:0}
+.hero__img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,5,5,.35) 0%,rgba(5,5,5,.05) 40%,rgba(5,5,5,.72) 78%,var(--bg) 100%)}
+.hero .wrap{padding-top:120px;padding-bottom:40px;width:100%}
+.hero h1{margin-top:16px;font-size:clamp(54px,11.5vw,150px);line-height:.86;font-weight:700;letter-spacing:-.045em;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero__meta{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px 28px;font-size:14px;color:rgba(255,255,255,.85)}
+.hero__meta b{font-weight:600;color:#fff}
+.hero__credit{position:absolute;right:var(--gutter);top:76px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.hero__back{margin-top:26px;display:inline-flex;align-items:center;gap:10px;padding:12px 22px;border:1px solid rgba(255,255,255,.3);border-radius:999px;font-size:13px;font-weight:600;color:#fff;text-decoration:none;transition:border-color .25s ease,background .25s ease,transform .25s cubic-bezier(.16,1,.3,1)}
+.hero__back i{font-style:normal;transition:transform .25s cubic-bezier(.16,1,.3,1)}
+.hero__back:hover{border-color:var(--accent);background:rgba(var(--accent-rgb),.1);transform:translateY(-2px)}
+.hero__back:hover i{transform:translateX(-4px)}
+
+/* brief */
+.brief{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.brief p+p{margin-top:16px}
+.brief .lead+p{margin-top:20px}
+.brief p{font-size:16px;line-height:1.6;color:rgba(255,255,255,.78);max-width:62ch}
+.numbers{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.numbers div{padding:20px 18px 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.numbers strong{display:block;font-size:clamp(34px,4vw,48px);line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.numbers span{display:block;margin-top:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-dim)}
+.numbers .hi strong{color:var(--accent)}
+@media (max-width:860px){.brief{grid-template-columns:1fr}}
+
+/* themes */
+.themes{margin-top:48px;display:grid;gap:0;border-top:1px solid var(--line)}
+.theme{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,64px);padding:40px 0;border-bottom:1px solid var(--line)}
+.theme h3{font-size:clamp(24px,3vw,34px);line-height:1.05;letter-spacing:-.025em;font-weight:700;text-wrap:balance}
+.theme h3 span{color:var(--accent)}
+.theme p{margin-top:14px;font-size:16px;line-height:1.6;color:rgba(255,255,255,.78);max-width:60ch}
+.theme .who{margin-top:16px;display:flex;flex-wrap:wrap;gap:6px}
+.theme .who a{display:inline-flex;align-items:center;gap:7px;padding:5px 10px 5px 5px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--text-dim);text-decoration:none}
+.theme .who a:hover{border-color:rgba(255,255,255,.4);color:#fff}
+.theme .who img{width:22px;height:22px;border-radius:50%;object-fit:cover;background:#000}
+.evidence{border-left:2px solid var(--accent);padding-left:18px;align-self:start}
+.evidence .k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.evidence .n{margin-top:10px;font-size:clamp(40px,5vw,64px);line-height:.95;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.evidence .n small{font-size:.5em;letter-spacing:-.01em;color:var(--text-dim)}
+.evidence .t{margin-top:10px;font-size:14px;line-height:1.5;color:rgba(255,255,255,.8)}
+.evidence .s{margin-top:8px;font-size:12px;color:var(--text-faint)}
+.evidence .s a{color:var(--text-dim);text-decoration:none;border-bottom:1px solid var(--line)}
+.evidence .s a:hover{color:var(--accent);border-color:var(--accent)}
+.evidence+.evidence{margin-top:26px}
+@media (max-width:860px){.theme{grid-template-columns:1fr}}
+
+/* quotes */
+.quotes{margin-top:44px;columns:2;column-gap:28px}
+.q{break-inside:avoid;margin:0 0 28px;padding:26px 24px 22px;background:var(--card);border:1px solid var(--line)}
+.q blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(19px,1.7vw,23px);line-height:1.34;color:#fff;text-wrap:pretty}
+.q blockquote::before{content:"“";color:var(--accent);margin-right:2px}
+.q blockquote::after{content:"”";color:var(--accent);margin-left:2px}
+.q figcaption{margin-top:18px;display:flex;align-items:center;gap:12px}
+.q figcaption img{width:52px;height:52px;border-radius:50%;object-fit:cover;background:#000;flex:0 0 auto}
+.q figcaption b{display:block;font-size:14px;font-weight:600}
+.q figcaption span{display:block;font-size:12px;color:var(--text-dim);margin-top:2px}
+.q.big{column-span:all;padding:40px 36px;border-color:rgba(var(--accent-rgb),.35);background:linear-gradient(180deg,rgba(var(--accent-rgb),.06),transparent)}
+.q.big blockquote{font-size:clamp(24px,2.8vw,36px);max-width:30ch}
+@media (max-width:760px){.quotes{columns:1}}
+
+/* programme */
+.stages{margin-top:44px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.stage h3{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);padding-bottom:12px;border-bottom:1px solid var(--line)}
+.stage ol{list-style:none}
+.stage li{display:grid;grid-template-columns:52px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line-soft)}
+.stage time{font-size:12px;color:var(--text-dim);font-variant-numeric:tabular-nums;padding-top:2px}
+.stage b{display:block;font-size:14px;font-weight:600;line-height:1.3}
+.stage span{display:block;margin-top:3px;font-size:12px;color:var(--text-dim);line-height:1.4}
+.stage .kind{display:inline-block;margin-top:5px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-faint)}
+.tables{margin-top:36px;padding:24px;border:1px solid var(--line);background:var(--card)}
+.tables h3{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.tables ul{margin-top:14px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 22px;list-style:none}
+.tables li{font-size:13px;line-height:1.4;color:rgba(255,255,255,.8)}
+.tables li b{color:#fff;font-weight:600}
+.tables li span{display:block;font-size:12px;color:var(--text-dim);margin-top:2px}
+@media (max-width:900px){.stages,.tables ul{grid-template-columns:1fr}}
+
+/* gallery */
+.gallery{margin-top:40px;display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(110px,14vw,190px);gap:8px}
+.gallery figure{overflow:hidden;background:#000;position:relative}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.gallery figure:hover img{transform:scale(1.03)}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:10px 12px;font-size:12px;line-height:1.35;color:#fff;background:linear-gradient(0deg,rgba(0,0,0,.72),transparent)}
+.gallery .w3{grid-column:span 3}.gallery .w2{grid-column:span 2}.gallery .w4{grid-column:span 4}.gallery .h2{grid-row:span 2}
+@media (max-width:760px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}.gallery .w3,.gallery .w2,.gallery .w4{grid-column:span 2}.gallery .h2{grid-row:span 1}}
+
+/* partners + next */
+.partners{margin-top:28px;display:flex;flex-wrap:wrap;gap:8px}
+.partners span{padding:8px 14px;border:1px solid var(--line);font-size:13px;color:rgba(255,255,255,.82)}
+.partners .lead-p{border-color:rgba(var(--accent-rgb),.5);color:var(--accent)}
+.next{margin-top:44px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.next a{display:block;padding:20px 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none}
+.next a:hover{background:var(--surface-hi)}
+.next b{display:block;font-size:22px;letter-spacing:-.02em;text-transform:uppercase}
+.next span{display:block;margin-top:6px;font-size:12px;color:var(--text-dim)}
+.next .cta{background:var(--accent);color:#000}
+.next .cta span{color:rgba(0,0,0,.65)}
+@media (max-width:900px){.next{grid-template-columns:repeat(2,1fr)}}
+
+/* sources + footer */
+.sources{margin-top:28px;font-size:13px;line-height:1.55;color:var(--text-dim);columns:2;column-gap:40px}
+.sources li{break-inside:avoid;padding:6px 0;border-bottom:1px solid var(--line-soft)}
+.sources a{color:rgba(255,255,255,.75);text-decoration:none;border-bottom:1px solid var(--line)}
+.sources a:hover{color:var(--accent);border-color:var(--accent)}
+@media (max-width:760px){.sources{columns:1}}
+footer{padding:36px 0 60px;border-top:1px solid var(--line);font-size:12px;color:var(--text-faint);display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center}
+footer img{width:64px}
+@media print{.top{position:static}section{break-inside:auto}.q{break-inside:avoid}}
+/* reveal + motion */
+@media (prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+.js .reveal{opacity:0;transition:opacity .6s ease var(--d,0s),transform .6s cubic-bezier(.16,1,.3,1) var(--d,0s),filter .5s ease var(--d,0s)}
+.js .reveal.in{opacity:1}
+.js .reveal:not(.word){transform:translateY(26px);will-change:opacity,transform}
+.js .reveal:not(.word).in{transform:none}
+.js .eyebrow.reveal i{width:0;transition:width .5s cubic-bezier(.16,1,.3,1) calc(var(--d,0s) + .15s)}
+.js .eyebrow.reveal.in i{width:22px}
+
+/* fancy text: word-by-word mask reveal, used for headlines/leads/quotes/body copy */
+.split-line{display:inline-block;overflow:hidden;vertical-align:top}
+.js .reveal.word{display:inline-block;transform:translateY(105%);filter:blur(7px);transition:transform .65s cubic-bezier(.16,1,.3,1) var(--d,0s),opacity .4s ease var(--d,0s),filter .55s ease var(--d,0s);will-change:opacity,transform,filter}
+.js .reveal.word.in{transform:translateY(0);filter:blur(0)}
+
+/* hero entrance */
+.hero h1 .ln{display:block;overflow:hidden}
+.hero h1 .ln>span{display:block;transform:translateY(112%);animation:lnUp .85s cubic-bezier(.16,1,.3,1) forwards}
+.hero h1 .ln:nth-child(1)>span{animation-delay:.18s}
+.hero h1 .ln:nth-child(2)>span{animation-delay:.3s}
+.hero h1 .ln:nth-child(3)>span{animation-delay:.42s}
+@keyframes lnUp{to{transform:translateY(0)}}
+.hero__img{animation:heroScale 1.8s cubic-bezier(.16,1,.3,1) both}
+@keyframes heroScale{from{transform:scale(1.07)}to{transform:scale(1)}}
+.hero .eyebrow{opacity:0;animation:heroFade .6s ease .05s forwards}
+.hero__meta{opacity:0;animation:heroFade .6s ease .58s forwards}
+.hero__back{opacity:0;animation:heroFade .6s ease .72s forwards}
+.hero__credit{opacity:0;animation:heroFade .6s ease .84s forwards}
+@keyframes heroFade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* reading progress */
+#progress{position:fixed;top:56px;left:0;height:2px;width:0%;background:var(--accent);z-index:39;transition:width .1s linear}
+@media print{#progress{display:none}}
+
+/* nav active state */
+.top nav a{position:relative;padding-bottom:3px;transition:color .25s ease}
+.top nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-1px;height:1px;background:var(--accent);transition:right .35s cubic-bezier(.16,1,.3,1)}
+.top nav a:hover::after,.top nav a.active::after{right:0}
+.top nav a.active{color:var(--accent)}
+.brand-mark{transition:transform .3s cubic-bezier(.16,1,.3,1)}
+.top__in>a:hover .brand-mark{transform:scale(1.08)}
+
+/* hover polish */
+.q{transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .35s ease,box-shadow .35s ease}
+.q:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.28);box-shadow:0 18px 36px -18px rgba(0,0,0,.6)}
+.partners span{transition:border-color .25s ease,color .25s ease,transform .25s ease}
+.partners span:hover{border-color:rgba(255,255,255,.4);color:#fff;transform:translateY(-2px)}
+.next a{transition:background .25s ease,transform .25s cubic-bezier(.16,1,.3,1)}
+.next a:hover{transform:translateY(-3px)}
+.next .cta:hover{filter:brightness(1.07)}
+
+/* back to top */
+#toTop{position:fixed;right:20px;bottom:20px;z-index:50;width:46px;height:46px;border-radius:50%;border:0;background:var(--accent);color:#000;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(14px) scale(.88);pointer-events:none;transition:opacity .35s ease,transform .4s cubic-bezier(.16,1,.3,1),background .25s ease;box-shadow:0 10px 26px -8px rgba(0,0,0,.6)}
+#toTop.show{opacity:1;transform:none;pointer-events:auto}
+#toTop:hover{background:#fff}
+@media print{#toTop{display:none}}
+
+/* from the decks */
+.decks{margin-top:44px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.slide{display:flex;flex-direction:column;background:#000;border:1px solid var(--line)}
+.slide__body{aspect-ratio:16/9;padding:clamp(18px,2.4vw,34px);display:flex;flex-direction:column;justify-content:center;font-weight:700;letter-spacing:-.02em;line-height:1.08;font-size:clamp(18px,1.9vw,26px)}
+.slide__body em{font-style:normal;color:var(--accent)}
+.slide__body .big{font-size:clamp(22px,2.3vw,32px)}
+.slide__body ol{margin-top:14px;padding-left:1.2em;font-weight:400;font-size:.72em;line-height:1.4;color:rgba(255,255,255,.85)}
+.slide__body .small-k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:4px}
+.slide__body .attr{margin-top:14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim);font-weight:600}
+.slide__body .steps{list-style:none;padding:0;margin:0;font-size:.62em;line-height:1.3;display:grid;gap:5px}
+.slide__body .steps b{color:var(--accent);text-transform:uppercase;letter-spacing:.12em;font-size:.85em;margin-right:6px}
+.s-meghan .slide__body{font-family:var(--font)}
+.s-cassie .slide__body{background:#f4f3ef;color:#111}
+.s-cassie .slide__body ol{color:#1c3f95;font-family:var(--serif);font-size:.85em}
+.s-gleb .slide__body{background:#0a0a0a;font-size:clamp(17px,1.7vw,23px)}
+.s-gleb .slide__body em{color:#8f8cff}
+.s-sures .slide__body{background:#000}
+.s-ddx .slide__body{background:#050505;border-top:2px solid var(--accent)}
+.slide figcaption{padding:10px 14px 12px;font-size:12px;color:var(--text-dim);border-top:1px solid var(--line-soft);line-height:1.4}
+.slide figcaption b{color:#fff;font-weight:600}
+.slide{transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .35s ease}
+.slide:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.28)}
+@media (max-width:900px){.decks{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.decks{grid-template-columns:1fr}}
+
+/* partners */
+.plist{margin-top:36px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.pcard{display:flex;flex-direction:column;gap:14px;padding:26px 22px 24px;border:1px solid var(--line);background:var(--card);text-decoration:none;transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .35s ease}
+.pcard:hover{transform:translateY(-4px);border-color:rgba(255,242,4,.5)}
+.pcard>img{height:44px;width:auto;max-width:100%;object-fit:contain;object-position:left}
+.pcard .fof{display:flex;align-items:center;gap:10px;height:44px}
+.pcard .fof img:first-child{height:36px;width:auto}
+.pcard .fof img+img{height:14px;width:auto}
+.pcard .fof em{font-style:normal;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.pcard b{font-size:16px;font-weight:600;margin-top:4px}
+.pcard span:last-child{font-size:13px;line-height:1.5;color:var(--text-dim)}
+@media (max-width:900px){.plist{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.plist{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top__in">
+    <a href="https://www.ddxconference.com/miami"><img class="brand-mark" src="assets/img/ddx-wordmark.png" alt="DDX"></a>
+    <span class="top__title">Miami ’26 · Conference Report</span>
+    <nav>
+      <a href="#brief">In brief</a><a href="#themes">Themes</a><a href="#slides">From the decks</a><a href="#voices">Voices</a><a href="#day">The day</a><a href="#room">The room</a><a href="#partners">Partners</a>
+    </nav>
+  </div>
+</header>
+<div id="progress" aria-hidden="true"></div>
+
+<section class="hero">
+  <img class="hero__img" src="assets/img/photos/hero.jpg" alt="Sebastian Gier opening DDX'26 Miami on the main stage at The LAB Miami" fetchpriority="high">
+  <span class="hero__credit">Photos · DDX Miami</span>
+  <div class="wrap">
+    <div class="eyebrow"><i></i><span>Conference report</span><span>24–25 September 2026</span></div>
+    <h1><span class="ln"><span>The</span></span><span class="ln"><span>Inflection</span></span><span class="ln"><span><em>Point</em></span></span></h1>
+    <div class="hero__meta">
+      <span><b>DDX’26 Miami</b></span>
+      <span>The LAB Miami · University of Miami</span>
+      <span>Design &amp; Product Leaders Exchange on the Future of Digital Innovation</span>
+    </div>
+    <a class="hero__back" href="https://www.ddxconference.com/miami"><i>←</i> Back to the DDX Miami page</a>
+  </div>
+</section>
+
+<section id="brief">
+  <div class="wrap brief">
+    <div>
+      <div class="eyebrow"><i></i><span>In brief</span></div>
+      <h2>Two days, one city, one question</h2>
+      <p class="lead" style="margin-top:22px">If every competitor runs on the same AI, what makes yours worth choosing? DDX’26 Miami put that question to nineteen speakers from Google DeepMind, Medium, Adobe, Amazon, Docusign, American Express, Universal Destinations &amp; Experiences, Brain Technologies, Askable, Citi and Miami’s own design community, and to a room that answered back at every table.</p>
+      <p>The day opened on Thursday evening at the University of Miami, where three design leaders unlearned leadership in disruptive times. It continued on Friday at The LAB Miami: seven talks, two panels, two hands-on workshops and six table talks, closing with a keynote on the last screen and a room that stayed for the after-event.</p>
+      <p>The answer that emerged was consistent from the first slide to the last: AI makes everything personal, and personal isn’t human. When the models, the vendors and the metrics are the same, difference lives in judgment, in the tensions a team chooses to hold, and in the room a service leaves for a person to do the unscripted thing. Design’s job is moving upstream, closer to the decision.</p>
+    </div>
+    <div class="numbers">
+      <div class="hi"><strong>19</strong><span>Speakers on stage</span></div>
+      <div><strong>2</strong><span>Days · two venues</span></div>
+      <div><strong>3</strong><span>Panels</span></div>
+      <div><strong>2</strong><span>Workshops</span></div>
+      <div><strong>6</strong><span>Table talks</span></div>
+      <div><strong>1</strong><span>Digital keynote from London</span></div>
+      <div class="hi"><strong>100+</strong><span>Leaders in the room</span></div>
+      <div><strong>4,000+</strong><span>DDX alumni worldwide</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="themes">
+  <div class="wrap">
+    <div class="eyebrow"><i></i><span>What the room agreed on</span><span>Five threads, with the 2026 evidence behind them</span></div>
+    <h2>Personal isn’t human.</h2>
+    <div class="themes">
+      <article class="theme">
+        <div>
+          <h3>Same models, same vendors, same data. <span>Difference is the value.</span></h3>
+          <p>Meghan Preiss opened the main stage with a man running through an airport in his socks and a pilot who waited twelve minutes: nobody designed that, somebody left room for it. Her argument ran through the whole day: AI makes every service individually better and collectively the same, personalisation is a mail merge with better manners, and when sameness is cheap, difference is the value. Difference lives in interaction, in the tensions a company chooses to hold rather than resolve toward the metric, and in the emotions no script asked for. Let the machines be personal. Let people be human.</p>
+          <div class="who">
+            <a href="#day"><img src="assets/img/speakers/meghan-preiss.png" alt="">Meghan Preiss</a>
+            <a href="#day"><img src="assets/img/speakers/jonathan-montalvo.png" alt="">Jonathan Montalvo</a>
+            <a href="#day"><img src="assets/img/speakers/shaivi-ganatra.png" alt="">Shaivi Ganatra</a>
+            <a href="#day"><img src="assets/img/speakers/anastasiia-leliakova.png" alt="">Anastasiia Leliakova</a>
+          </div>
+        </div>
+        <aside>
+          <div class="evidence"><div class="k">Cited on stage</div><div class="n">85<small>%</small></div><div class="t">would rather talk to a real person than to AI when contacting a business, up from 83% a year earlier. Human, as a luxury tier.</div><div class="s">AnswerConnect / OnePoll, May 2026, 6,000 adults in the US, UK and Canada, via Meghan Preiss’s deck</div></div>
+          <div class="evidence"><div class="k">The trust problem</div><div class="n">50<small>%</small></div><div class="t">of US consumers would rather give their business to brands that do not use generative AI in customer-facing content.</div><div class="s">Gartner, <a href="https://www.gartner.com/en/newsroom/press-releases/2026-03-16-gartner-marketing-survey-finds-50-percent-of-consumers-prefer-brands-that-avoid-using-genai-in-consumer-facing-content0">marketing survey</a>, March 2026</div></div>
+        </aside>
+      </article>
+
+      <article class="theme">
+        <div>
+          <h3>Feel it. <span>Design belongs closer to the decision.</span></h3>
+          <p>Cassie McDaniel’s talk gave the room permission it did not know it needed: you can make decisions without data. There are three sources of information that lead to product decisions, feels, reason and data, and a design team that only brings the third one is not in the room where the call is made. Monica Girel showed what that looks like in practice: information architecture still creates enormous value, but a static IA map no longer works for non-deterministic experiences, so she mapped a new framework for AI features that feel integrated with the product they live in. On the agentic-design panel with Gleb Kuznetsov, moderated by Sebastian Gier, the same point came back as a leadership question: who is allowed to say yes.</p>
+          <div class="who">
+            <a href="#day"><img src="assets/img/speakers/cassie-mcdaniel.png" alt="">Cassie McDaniel</a>
+            <a href="#day"><img src="assets/img/speakers/monica-girel.png" alt="">Monica Girel</a>
+            <a href="#day"><img src="assets/img/speakers/gleb-kuznetsov.png" alt="">Gleb Kuznetsov</a>
+            <a href="#day"><img src="assets/img/speakers/panel-agentic.png" alt="">Agentic-design panel</a>
+          </div>
+        </div>
+        <aside>
+          <div class="evidence"><div class="k">2026 evidence</div><div class="n">72<small>%</small></div><div class="t">of CEOs now say they are the main AI decision-maker in their company, double the prior year. Design that wants influence has to be in that room.</div><div class="s">BCG, <a href="https://www.bcg.com/publications/2026/as-ai-investments-surge-ceos-take-the-lead">AI Radar 2026</a>, January 2026</div></div>
+          <div class="evidence"><div class="k">The gap to close</div><div class="n">37<small>%</small></div><div class="t">of organisations say AI has contributed to enterprise EBIT, unchanged from a year earlier, while 80% of respondents say it improved their own productivity.</div><div class="s">McKinsey, <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai">The State of AI in 2026</a>, August 2026</div></div>
+        </aside>
+      </article>
+
+      <article class="theme">
+        <div>
+          <h3>Six months with an agent: <span>detach, focus, align, delegate, audit.</span></h3>
+          <p>Sures Kumar handed an AI agent his calendar, fifteen years of email, ten years of transactions, his journals and his lab results, and reported back. Some of it worked better than expected; some of it he took back, and every failure fell into one of three buckets: the agent was missing context it was never given, the information could not be captured, or it had everything and still reasoned badly. His five-step process for using agents safely, at work and at home, was the most photographed slide of the day. Gleb Kuznetsov closed the stage with the harder version of the question: the last thing you shipped, what does it do when nobody is interacting with it?</p>
+          <div class="who">
+            <a href="#day"><img src="assets/img/speakers/sures-kumar.png" alt="">Sures Kumar</a>
+            <a href="#day"><img src="assets/img/speakers/gleb-kuznetsov.png" alt="">Gleb Kuznetsov</a>
+            <a href="#day"><img src="assets/img/speakers/abhilash-kolapareddy.png" alt="">Abhilash Kolapareddy</a>
+            <a href="#day"><img src="assets/img/speakers/coral-miniel.png" alt="">Coral Miniel</a>
+          </div>
+        </div>
+        <aside>
+          <div class="evidence"><div class="k">2026 evidence</div><div class="n">20 → 77<small>%</small></div><div class="t">AI agents’ success rate on real-world tasks, up from 20% in 2025. Agents that can act need context they can act on.</div><div class="s">Stanford HAI, <a href="https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report">2026 AI Index</a>, April 2026</div></div>
+          <div class="evidence"><div class="k">On the consumer side</div><div class="n">41<small>%</small></div><div class="t">of US AI users have tried an agent and 32% have let one act on their behalf without approval, while 70% of non-users distrust AI-generated information.</div><div class="s">Menlo Ventures, <a href="https://menlovc.com/perspective/2026-the-state-of-consumer-ai/">The State of Consumer AI</a>, September 2026</div></div>
+        </aside>
+      </article>
+
+      <article class="theme">
+        <div>
+          <h3>The best design system is <span>one AI can’t forget to use.</span></h3>
+          <p>Ivan Barriga’s workshop introduced the Design Genome: design systems evolving from passive documentation into living infrastructure that both humans and AI can read, so generative tools inherit a company’s design language by default instead of being told the rules with every prompt. Jonathan Ruiz, who runs the team behind Ink at Docusign, framed the same shift as a management problem: the future of design is less about the tools than the systems that keep AI-assisted work consistent, coherent and human at scale. Dianne Alter called the designers who will win the ones who embrace orchestration, feeding the right context and taste into an AI to build the right thing instead of the generic thing.</p>
+          <div class="who">
+            <a href="#day"><img src="assets/img/speakers/ivan-barriga.png" alt="">Ivan Barriga</a>
+            <a href="#day"><img src="assets/img/speakers/jonathan-ruiz.png" alt="">Jonathan Ruiz</a>
+            <a href="#day"><img src="assets/img/speakers/dianne-alter.png" alt="">Dianne Alter</a>
+            <a href="#day"><img src="assets/img/speakers/raul-justiniano.png" alt="">Raul Justiniano</a>
+          </div>
+        </div>
+        <aside>
+          <div class="evidence"><div class="k">2026 evidence</div><div class="n">91<small>%</small></div><div class="t">of designers now use AI for design tasks every week, up from 54% a year earlier. Half have shipped AI-generated code to production.</div><div class="s">Designer Fund &amp; Foundation Capital, <a href="https://designerfund.substack.com/p/ai-in-design-2026-the-inflection">AI in Design 2026</a>, May 2026</div></div>
+          <div class="evidence"><div class="k">The roles converge</div><div class="n">21 → 41<small>%</small></div><div class="t">of designers now do development work, doubling in a year; developers doing design rose from 44% to 60%.</div><div class="s">Figma, <a href="https://www.figma.com/blog/2026-ai-report/">2026 AI Report</a>, June 2026</div></div>
+        </aside>
+      </article>
+
+      <article class="theme">
+        <div>
+          <h3>Research at the scale of the business, <span>judgment in the loop.</span></h3>
+          <p>Elizabeth Reme is the sole researcher across American Express’s customer-service ecosystem, and her workshop walked through the GenAI-assisted synthesis pipeline she built to process more than 200,000 open-ended responses a quarter at zero extra tooling cost. Attendees sorted a sample by hand, compared their groupings with an AI pass, and found the costly failure mode: feedback that sounds identical but points to different root causes. Liz Steelman’s MCP roundtable turned tool-connected research queries into a card game; Coral Miniel’s table asked how to keep human judgment at the centre once prototypes arrive faster than understanding. The closing panel, More Human, Not Less, gave the day its verdict.</p>
+          <div class="who">
+            <a href="#day"><img src="assets/img/speakers/elizabeth-reme.png" alt="">Elizabeth Reme</a>
+            <a href="#day"><img src="assets/img/speakers/liz-steelman.png" alt="">Liz Steelman</a>
+            <a href="#day"><img src="assets/img/speakers/beto-navarro.png" alt="">Beto Navarro</a>
+            <a href="#day"><img src="assets/img/speakers/panel-more-human.png" alt="">More Human, Not Less panel</a>
+          </div>
+        </div>
+        <aside>
+          <div class="evidence"><div class="k">2026 evidence</div><div class="n">8 → 22<small>%</small></div><div class="t">share of organisations where research is “essential to all levels of business strategy”, nearly tripling in a year. 69% of practitioners now use AI in at least some projects.</div><div class="s">Maze, <a href="https://maze.co/blog/future-user-research-2026/">The Future of User Research 2026</a>, March 2026</div></div>
+          <div class="evidence"><div class="k">Still human</div><div class="n">82<small>%</small></div><div class="t">of research practitioners say interpreting nuance and emotion remains a job for humans, even as AI use in research climbs.</div><div class="s">Maze, <a href="https://maze.co/blog/future-user-research-2026/">The Future of User Research 2026</a>, March 2026</div></div>
+        </aside>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="slides">
+  <div class="wrap">
+    <div class="eyebrow"><i></i><span>From the decks</span><span>Slides the room photographed, reset in type</span></div>
+    <h2>Seven slides worth keeping</h2>
+    <div class="decks">
+      <figure class="slide s-meghan">
+        <div class="slide__body"><p>Individually better.<br><em>Collectively the same.</em></p></div>
+        <figcaption><b>Meghan Preiss</b> · Personal Isn’t Human · slide 27 of 111</figcaption>
+      </figure>
+      <figure class="slide s-meghan">
+        <div class="slide__body"><p>Let the machines be personal.<br><em>Let people be human.</em></p></div>
+        <figcaption><b>Meghan Preiss</b> · Personal Isn’t Human · slide 94</figcaption>
+      </figure>
+      <figure class="slide s-cassie">
+        <div class="slide__body"><p class="big">You can make decisions without data.</p><ol><li>Feels</li><li>Reason</li><li>Data</li></ol></div>
+        <figcaption><b>Cassie McDaniel</b> · Feel It: Why Design Should Be Closer to Decision-Making</figcaption>
+      </figure>
+      <figure class="slide s-sures">
+        <div class="slide__body">
+          <ol class="steps">
+            <li><b>Detach</b> Don’t give it a name. You keep auditing something instead of trusting someone.</li>
+            <li><b>Focus</b> Start with one domain. Finances, then health, then people.</li>
+            <li><b>Align</b> Have long conversations with no task attached.</li>
+            <li><b>Delegate</b> Hand over only tasks you already know how to do.</li>
+            <li><b>Audit</b> Read its thinking trace as a habit, not an investigation.</li>
+          </ol>
+        </div>
+        <figcaption><b>Sures Kumar</b> · Six Months of Giving an AI Agent My Whole Life · slide 34 of 35</figcaption>
+      </figure>
+      <figure class="slide s-meghan">
+        <div class="slide__body"><p class="small-k">Three questions for Monday</p><ol><li>Where are we resolving a tension we should hold?</li><li>Who’s allowed to say yes?</li><li>Where is the room?</li></ol></div>
+        <figcaption><b>Meghan Preiss</b> · Personal Isn’t Human · slide 103</figcaption>
+      </figure>
+      <figure class="slide s-gleb">
+        <div class="slide__body"><p>The last thing you shipped.<br><em>What does it do when we’re not interacting with it?</em></p></div>
+        <figcaption><b>Gleb Kuznetsov</b> · The Last Screen · a question before we start</figcaption>
+      </figure>
+      <figure class="slide s-ddx">
+        <div class="slide__body"><p>The world is more designable <em>than ever.</em></p><span class="attr">Mark Rolston</span></div>
+        <figcaption><b>Sebastian Gier</b> · Welcome · the line the day opened on</figcaption>
+      </figure>
+    </div>
+    <p class="small" style="margin-top:22px">Slide text reproduced from the speakers’ decks as shared with DDX; layouts are the report’s, not the originals. Meghan Preiss also cited Doshi &amp; Hauser (Science Advances, 2024): stories written with AI help were 10.7% more similar to each other than stories written without it.</p>
+  </div>
+</section>
+
+<section id="voices">
+  <div class="wrap">
+    <div class="eyebrow"><i></i><span>In their words</span><span>Speakers on the future of innovation</span></div>
+    <h2>Fifteen positions on the future</h2>
+    <div class="quotes">
+      <figure class="q big">
+        <blockquote>Innovation is moving from invention to orchestration. The next decade belongs to the people who can design how intelligence, infrastructure, and human judgment work together, because the hard part is no longer building the thing, it is making the thing hold across an entire system.</blockquote>
+        <figcaption><img src="assets/img/speakers/meghan-preiss.png" alt=""><div><b>Meghan Preiss</b><span>Head of Global Service Design, Universal Destinations &amp; Experiences · Talk “Personal Isn’t Human”</span></div></figcaption>
+      </figure>
+      <figure class="q">
+        <blockquote>AI didn't replace the craft, it accelerated it. It also collapsed the cost of building tech products so dramatically that not building a feature is now a choice you have to defend, which leaves the harder question of what is worth building at all.</blockquote>
+        <figcaption><img src="assets/img/speakers/sures-kumar.png" alt=""><div><b>Sures Kumar</b><span>Staff Builder, Google DeepMind</span></div></figcaption>
+      </figure>
+      <figure class="q">
+        <blockquote>No matter how much technology evolves and products change with AI, you cannot take human judgment out of the process. While AI can generate hundreds of ideas, it still takes humans to decide what works and what doesn’t.</blockquote>
+        <figcaption><img src="assets/img/speakers/monica-girel.png" alt=""><div><b>Monica Girel</b><span>Senior Product Designer, Adobe</span></div></figcaption>
+      </figure>
+      <figure class="q">
+        <blockquote>Innovation is shifting from designing interfaces to designing intelligence. The next generation of digital products won’t be defined by pixels or apps, but by systems that understand intent, adapt in real time, and create deeply personal experiences.</blockquote>
+        <figcaption><img src="assets/img/speakers/gleb-kuznetsov.png" alt=""><div><b>Gleb Kuznetsov</b><span>Chief Design Officer, Brain Technologies</span></div></figcaption>
+      </figure>
+      <figure class="q">
+        <blockquote>The next wave of digital innovation isn't about AI replacing the researcher, it's about AI finally giving researchers the reach to listen at the scale their organizations operate at, while keeping human judgment as the layer that makes the output trustworthy enough to act on.</blockquote>
+        <figcaption><img src="assets/img/speakers/elizabeth-reme.png" alt=""><div><b>Elizabeth Reme</b><span>Senior UX Researcher, American Express</span></div></figcaption>
+      </figure>
+      <figure class="q">
+        <blockquote>The best design system in the AI era isn’t one people remember to use. It’s one AI can’t forget to use.</blockquote>
+        <figcaption><img src="assets/img/speakers/ivan-barriga.png" alt=""><div><b>Ivan Barriga</b><span>Head of Product Design, FlavorCloud</span></div></figcaption>
+      </figure>
+      <figure class="q">
+        <blockquote>The most exciting thing about this moment in design isn't the technology — it's that AI is forcing us to go back to first principles. The designers who thrive will be the ones who know why something should exist, not just how to make it.</blockquote>
+        <figcaption><img src="assets/img/speakers/beto-navarro.png" alt=""><div><b>Beto Navarro</b><span>Senior Product Designer, Amazon · Founder, Friends of Figma Miami</span></div></figcaption>
+      </figure>
+      <figure class="q">
+        <blockquote>The future of design is less about the tools we use and more about the systems we build to keep AI-assisted work consistent, coherent and human at scale.</blockquote>
+        <figcaption><img src="assets/img/speakers/jonathan-ruiz.png" alt=""><div><b>Jonathan Ruiz</b><span>Sr. Manager, Product Design, Docusign</span></div></figcaption>
+      </figure>
+      <figure class="q">
+        <blockquote>Designers that are winning in the future are the ones that embrace orchestration. That can feed the right context and taste into an AI to build the right thing instead of the generic thing. That designer judgement is the thing that cannot be automated.</blockquote>
+        <figcaption><img src="assets/img/speakers/dianne-alter.png" alt=""><div><b>Dianne Alter</b><span>Co-founder and Head of Design, The Design Project</span></div></figcaption>
+      </figure>
+      <figure class="q">
+        <blockquote>Design is shifting from creating standalone artifacts to architecting systems that amplify human capability and solve real problems.</blockquote>
+        <figcaption><img src="assets/img/speakers/raul-justiniano.png" alt=""><div><b>Raul Justiniano</b><span>Senior Director, Product Design, Asurion</span></div></figcaption>
+      </figure>
+      <figure class="q">
+        <blockquote>AI is making products more capable faster than we've had to design for before, and that makes the work of making them understandable matter more, not less. The interesting part isn't what the technology can do, it's what people can actually follow and trust while using it.</blockquote>
+        <figcaption><img src="assets/img/speakers/shaivi-ganatra.png" alt=""><div><b>Shaivi Ganatra</b><span>User Experience Designer, Viveka Health · Friends of Figma Miami</span></div></figcaption>
+      </figure>
+      <figure class="q">
+        <blockquote>The future of digital innovation isn’t about adding more technology, it’s about using technology to remove friction and create more meaningful human experiences. Our greatest responsibility as designers will be ensuring that what we build remains useful, inclusive, and distinctly human.</blockquote>
+        <figcaption><img src="assets/img/speakers/jonathan-montalvo.png" alt=""><div><b>Jonathan Montalvo</b><span>Principal Product Designer, Plei · Friends of Figma Miami</span></div></figcaption>
+      </figure>
+      <figure class="q">
+        <blockquote>I believe the future of digital innovation belongs to teams that bring real customer evidence directly into how they strategize, design and build. By combining human insight with AI, organizations can move faster without losing sight of the people they’re creating for.</blockquote>
+        <figcaption><img src="assets/img/speakers/liz-steelman.png" alt=""><div><b>Liz Steelman</b><span>Senior Content Marketing Manager, Askable</span></div></figcaption>
+      </figure>
+      <figure class="q">
+        <blockquote>AI can help us move faster, prototype faster, and explore more possibilities, but the best products will still come from understanding real people, their context, and the problems actually worth solving.</blockquote>
+        <figcaption><img src="assets/img/speakers/coral-miniel.png" alt=""><div><b>Coral Miniel</b><span>Founder, fixurfeed · Miami Tech Girl</span></div></figcaption>
+      </figure>
+      <figure class="q">
+        <blockquote>AI is changing the way we create, but the future of creativity is still human. The most valuable skill will be knowing how to use new technology without losing your own ideas, vision and point of view.</blockquote>
+        <figcaption><img src="assets/img/speakers/anastasiia-leliakova.png" alt=""><div><b>Anastasiia Leliakova</b><span>Founder &amp; Creative Director, Vegas Creative</span></div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="day">
+  <div class="wrap">
+    <div class="eyebrow"><i></i><span>The days</span><span>Thursday 24 and Friday 25 September 2026 · Eastern time</span></div>
+    <h2>The programme</h2>
+    <div class="stages">
+      <div class="stage">
+        <h3>Thursday · Pre-conference mixer · University of Miami</h3>
+        <ol>
+          <li><time>18:00</time><div><b>Open doors</b><span>Frost Institute for Chemistry and Molecular Science, Coral Gables · in partnership with the University of Miami</span></div></li>
+          <li><time>19:00</time><div><b>Welcome remarks &amp; introductions</b><span>Sebastian Gier</span></div></li>
+          <li><time>19:10</time><div><b>Unlearn to Learn: Leadership in Disruptive Times</b><span>Cassie McDaniel (Medium), Monica Girel (Adobe), Elizabeth Reme (American Express)</span><i class="kind">Panel</i></div></li>
+          <li><time>20:00</time><div><b>Drinks, light snacks &amp; networking</b></div></li>
+        </ol>
+      </div>
+      <div class="stage">
+        <h3>Friday · Main Stage · The LAB Miami</h3>
+        <ol>
+          <li><time>10:00</time><div><b>Welcome</b><span>Sebastian Gier, DDX</span></div></li>
+          <li><time>10:20</time><div><b>Personal Isn’t Human</b><span>Meghan Preiss, Universal Destinations &amp; Experiences</span><i class="kind">Keynote</i></div></li>
+          <li><time>10:50</time><div><b>Feel It: Why Design Should Be Closer to Decision-Making</b><span>Cassie McDaniel, Medium</span><i class="kind">Talk</i></div></li>
+          <li><time>12:00</time><div><b>The Future of Leading Design in an Agentic World</b><span>Monica Girel, Meghan Preiss, Gleb Kuznetsov · moderated by Sebastian Gier</span><i class="kind">Panel</i></div></li>
+          <li><time>13:45</time><div><b>Six Months of Giving an AI Agent My Whole Life</b><span>Sures Kumar, Google DeepMind</span><i class="kind">Talk</i></div></li>
+          <li><time>14:15</time><div><b>A Global View of Design: Lessons from Events Around the World</b><span>Amit Patel, Experience Haus · digital talk from London</span><i class="kind">Talk</i></div></li>
+          <li><time>15:25</time><div><b>From IA to AI and Back Again: A Framework for Mapping AI Experiences</b><span>Monica Girel, Adobe</span><i class="kind">Talk</i></div></li>
+          <li><time>15:55</time><div><b>More Human, Not Less: How AI Is Reshaping Work, Identity, and Everyday Life</b><span>Dianne Alter, Raul Justiniano, Elizabeth Reme, Beto Navarro · moderated by Jonathan Ruiz</span><i class="kind">Panel</i></div></li>
+          <li><time>17:20</time><div><b>The Last Screen</b><span>Gleb Kuznetsov, Brain Technologies</span><i class="kind">Keynote</i></div></li>
+          <li><time>17:50</time><div><b>Outro &amp; outlook</b><span>Sebastian Gier · then the after-event</span></div></li>
+        </ol>
+      </div>
+      <div class="stage">
+        <h3>Friday · Workshop Space</h3>
+        <ol>
+          <li><time>13:45</time><div><b>From Raw Data to Real Insights: A Working GenAI Pipeline for Turning Feedback Into Action</b><span>Elizabeth Reme, American Express · 60 minutes, hands-on</span><i class="kind">Workshop</i></div></li>
+          <li><time>15:25</time><div><b>The Design Genome: Building Design Systems for Humans and the AI Era</b><span>Ivan Barriga, FlavorCloud · 75 minutes, bring a laptop</span><i class="kind">Workshop</i></div></li>
+          <li><time>18:00</time><div><b>After-event</b><span>Food, drinks &amp; open networking at The LAB</span><i class="kind">After</i></div></li>
+        </ol>
+      </div>
+    </div>
+    <div class="tables">
+      <h3>Table talks in the breaks</h3>
+      <ul>
+        <li><b>Play Your Hand: An MCP Roundtable for Design, Product and Innovation</b><span>Liz Steelman, Askable · 11:25</span></li>
+        <li><b>Human-Centered Design in the Age of AI</b><span>Coral Miniel, fixurfeed · 11:25</span></li>
+        <li><b>Six Months of Giving an AI Agent My Whole Life, continued</b><span>Sures Kumar, Google DeepMind · 14:50</span></li>
+        <li><b>Where Do We Draw the Line? Designing with and for AI responsibly</b><span>Shaivi Ganatra, Viveka Health &amp; Jonathan Montalvo, Plei · 14:50</span></li>
+        <li><b>From User Flows to Agentic Workflows: What Changes When AI Becomes Part of the Team?</b><span>Abhilash Kolapareddy, Citi · 16:45</span></li>
+        <li><b>From Brand Identity to Brand Experience: How AI Is Changing the Way We Build Brands</b><span>Anastasiia Leliakova, Vegas Creative · 16:45</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="room">
+  <div class="wrap">
+    <div class="eyebrow"><i></i><span>The room</span><span>Friday at The LAB Miami</span></div>
+    <h2>Who was there, and what it looked like</h2>
+    <div class="gallery">
+      <figure class="w4 h2"><img src="assets/img/photos/DSC6639.jpg" alt="Cassie McDaniel on the main stage beside a slide reading You can make decisions without data" loading="lazy"><figcaption>Cassie McDaniel: you can make decisions without data. Feels, reason, data.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6685.jpg" alt="The main stage and audience during the agentic-design panel" loading="lazy"><figcaption>The main stage during the agentic-design panel.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6606.jpg" alt="Meghan Preiss walking on stage under her title slide" loading="lazy"><figcaption>Meghan Preiss takes the stage for Personal Isn’t Human.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6626.jpg" alt="Meghan Preiss with the slide Nobody designed that, somebody left room for it" loading="lazy"><figcaption>“Nobody designed that. Somebody left room for it.”</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6632.jpg" alt="Cassie McDaniel presenting in front of a bookshop photograph" loading="lazy"><figcaption>Cassie McDaniel on writing, reading and deciding.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6597.jpg" alt="The audience at The LAB Miami" loading="lazy"><figcaption>The room at The LAB Miami.</figcaption></figure>
+      <figure class="w3"><img src="assets/img/photos/DSC6688.jpg" alt="Monica Girel, Meghan Preiss and Gleb Kuznetsov on the agentic-design panel" loading="lazy"><figcaption>The Future of Leading Design in an Agentic World: Monica Girel, Meghan Preiss and Gleb Kuznetsov with Sebastian Gier.</figcaption></figure>
+      <figure class="w3"><img src="assets/img/photos/DSC6700.jpg" alt="Amit Patel on the main screen, speaking from London" loading="lazy"><figcaption>Amit Patel joins from London with a global view of design events.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6657.jpg" alt="Attendees at the Askable table" loading="lazy"><figcaption>Askable’s table: Streams, and a vacation to win.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6793.jpg" alt="An attendee at the Friends of Figma Miami banner" loading="lazy"><figcaption>Friends of Figma Miami, in the room all day.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6691.jpg" alt="Lunch at the University of Miami School of Communication table" loading="lazy"><figcaption>Lunch by the University of Miami School of Communication corner.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6728.jpg" alt="A speaker leading a table talk" loading="lazy"><figcaption>Table talks ran through every break, two at a time.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6737.jpg" alt="Attendees in conversation under the More Human, Not Less panel slide" loading="lazy"><figcaption>Between sessions, under the More Human, Not Less line-up.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6773.jpg" alt="A table talk host at the Friends of Figma corner" loading="lazy"><figcaption>Late-afternoon table talk by the Friends of Figma banner.</figcaption></figure>
+      <figure class="w3"><img src="assets/img/photos/DSC6797.jpg" alt="Gleb Kuznetsov presenting The Last Screen" loading="lazy"><figcaption>Gleb Kuznetsov: the last thing you shipped, what does it do when you’re not interacting with it?</figcaption></figure>
+      <figure class="w3"><img src="assets/img/photos/DSC6603.jpg" alt="Sebastian Gier running the Meet someone new exercise" loading="lazy"><figcaption>Two minutes to meet someone new, before the first coffee was cold.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="partners">
+  <div class="wrap">
+    <div class="eyebrow"><i></i><span>Partners</span><span>The people who made Miami possible</span></div>
+    <h2>Made possible by</h2>
+    <div class="plist">
+      <a class="pcard" href="https://com.miami.edu/">
+        <img src="assets/img/partners/university-of-miami.png" alt="University of Miami">
+        <b>University of Miami</b>
+        <span>Hosted the Thursday pre-conference mixer at the Frost Institute in Coral Gables and the School of Communication’s Interactive Media corner at The LAB. Elizabeth Reme is an alumna.</span>
+      </a>
+      <a class="pcard" href="https://askable.com/">
+        <img src="assets/img/partners/askable.png" alt="Askable">
+        <b>Askable</b>
+        <span>Research partner across the DDX series. Liz Steelman hosted the MCP roundtable, and the Askable table ran Streams demos through every break.</span>
+      </a>
+      <a class="pcard" href="https://friends.figma.com/miami/">
+        <span class="fof"><img src="assets/img/partners/friends-of-figma-icon.png" alt=""><img src="assets/img/partners/friends-of-figma-text.png" alt="Friends of Figma"><em>Miami</em></span>
+        <b>Friends of Figma Miami</b>
+        <span>Community partner. Founder Beto Navarro sat on the closing panel; Shaivi Ganatra and Jonathan Montalvo hosted the table on drawing the line with AI.</span>
+      </a>
+      <a class="pcard" href="https://thelabmiami.com/">
+        <img src="assets/img/partners/the-lab-miami.png" alt="The LAB Miami">
+        <b>The LAB Miami</b>
+        <span>Venue for the main day in Wynwood: main stage, workshop space, and the lobby where the table talks happened.</span>
+      </a>
+    </div>
+
+    <div class="eyebrow" style="margin-top:64px"><i></i><span>The series continues</span></div>
+    <h2>Same exchange, next city</h2>
+    <div class="next">
+      <a href="https://www.ddxconference.com/london"><b>London</b><span>Late 2026</span></a>
+      <a href="https://www.ddxconference.com/tokyo"><b>Tokyo</b><span>12 February 2027</span></a>
+      <a href="https://www.ddxconference.com/dubai"><b>Dubai</b><span>Early 2027</span></a>
+      <a href="https://www.ddxconference.com/sandiego"><b>San Diego ’27</b><span>Early-bird tickets open</span></a>
+      <a class="cta" href="https://www.ddxconference.com/miami"><b>Miami ’27</b><span>Join the list for the next edition</span></a>
+    </div>
+
+    <div class="eyebrow" style="margin-top:64px"><i></i><span>Sources</span><span>All external figures published in 2026</span></div>
+    <ol class="sources">
+      <li>AnswerConnect / OnePoll, consumer survey of 6,000 adults in the US, UK and Canada, May 2026, as cited in Meghan Preiss’s talk. Klarna CEO quote via CX Dive, 2026, same deck.</li>
+      <li>Designer Fund with Foundation Capital, <a href="https://designerfund.substack.com/p/ai-in-design-2026-the-inflection">AI in Design 2026: The Inflection Point Is Here</a>, May 2026. 900+ designers, 60+ countries.</li>
+      <li>Figma, <a href="https://www.figma.com/blog/2026-ai-report/">Figma’s 2026 AI Report</a>, June 2026. 8,403 survey responses and 639 interviews across 10 markets.</li>
+      <li>Maze, <a href="https://maze.co/blog/future-user-research-2026/">The Future of User Research Report 2026</a>, March 2026. Nearly 500 researchers, designers and product professionals.</li>
+      <li>McKinsey &amp; QuantumBlack, <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai">The State of AI in 2026: On the Road to ROI</a>, August 2026. 1,719 respondents.</li>
+      <li>Gartner, <a href="https://www.gartner.com/en/newsroom/press-releases/2026-03-16-gartner-marketing-survey-finds-50-percent-of-consumers-prefer-brands-that-avoid-using-genai-in-consumer-facing-content0">50% of consumers prefer brands that avoid GenAI in consumer-facing content</a>, March 2026.</li>
+      <li>BCG, <a href="https://www.bcg.com/publications/2026/as-ai-investments-surge-ceos-take-the-lead">AI Radar 2026: As AI Investments Surge, CEOs Take the Lead</a>, January 2026. 2,360 executives, 16 markets.</li>
+      <li>Stanford HAI, <a href="https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report">The 2026 AI Index Report</a>, April 2026.</li>
+      <li>Menlo Ventures, <a href="https://menlovc.com/perspective/2026-the-state-of-consumer-ai/">2026: The State of Consumer AI</a>, September 2026. 5,067 US adults with Morning Consult.</li>
+      <li>Programme, roles and titles as published at <a href="https://www.ddxconference.com/miami-agenda">ddxconference.com/miami-agenda</a>; speaker statements, bios and session descriptions from their DDX submissions; slide text from the decks shared with DDX after the conference.</li>
+    </ol>
+  </div>
+</section>
+
+<footer class="wrap">
+  <img src="assets/img/ddx-wordmark.png" alt="DDX">
+  <span>DDX is hosted by FastForward Global. Programme, roles and titles as published on ddxconference.com/miami-agenda; speaker statements from their DDX submissions.</span>
+  <span>ddxconference.com</span>
+</footer>
+
+<button id="toTop" aria-label="Back to top" title="Back to top">↑</button>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}#progress,#toTop{display:none!important}</style></noscript>
+<script>
+(function(){
+  var reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var supportsIO = 'IntersectionObserver' in window;
+
+  /* reading progress */
+  var progress = document.getElementById('progress');
+  if (progress) {
+    var onScroll = function(){
+      var h = document.documentElement;
+      var max = h.scrollHeight - h.clientHeight;
+      progress.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    };
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+  }
+
+  /* back to top */
+  var toTop = document.getElementById('toTop');
+  if (toTop) {
+    toTop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior: reduced ? 'auto' : 'smooth'});
+    });
+    window.addEventListener('scroll', function(){
+      toTop.classList.toggle('show', window.scrollY > window.innerHeight * 0.8);
+    }, {passive:true});
+  }
+
+  /* scrollspy */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.top nav a[href^="#"]'));
+  if (navLinks.length && supportsIO) {
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (!e.isIntersecting) return;
+        var link = navLinks.filter(function(a){ return a.getAttribute('href') === '#' + e.target.id; })[0];
+        if (!link) return;
+        navLinks.forEach(function(a){ a.classList.remove('active'); });
+        link.classList.add('active');
+      });
+    }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
+    navLinks.forEach(function(a){
+      var sec = document.querySelector(a.getAttribute('href'));
+      if (sec) spy.observe(sec);
+    });
+  }
+
+  /* reveal + count-up (skipped entirely for reduced motion: nothing gets hidden) */
+  if (reduced) return;
+
+  var revealed = new Set();
+
+  function animateDigits(node){
+    var original = node.textContent;
+    var re = /\d[\d,]*/g, m, targets = [];
+    while ((m = re.exec(original))) targets.push({start:m.index, end:m.index + m[0].length, value:parseInt(m[0].replace(/,/g,''),10), comma:m[0].indexOf(',') > -1});
+    if (!targets.length) return;
+    var dur = 900, t0 = null;
+    function step(ts){
+      if (t0 === null) t0 = ts;
+      var p = Math.min(1, (ts - t0) / dur), eased = 1 - Math.pow(1 - p, 3), out = '', cursor = 0;
+      targets.forEach(function(t){
+        out += original.slice(cursor, t.start);
+        var cur = Math.round(t.value * eased);
+        out += t.comma ? cur.toLocaleString('en-US') : String(cur);
+        cursor = t.end;
+      });
+      out += original.slice(cursor);
+      node.textContent = out;
+      if (p < 1) requestAnimationFrame(step); else node.textContent = original;
+    }
+    requestAnimationFrame(step);
+  }
+
+  function markVisible(el){
+    if (revealed.has(el)) return;
+    revealed.add(el);
+    el.classList.add('in');
+    if (el.matches('.numbers > div')) {
+      var strong = el.querySelector('strong');
+      if (strong && strong.firstChild) animateDigits(strong.firstChild);
+    } else if (el.matches('.evidence')) {
+      var n = el.querySelector('.n');
+      if (n && n.firstChild) animateDigits(n.firstChild);
+    }
+  }
+
+  function revealWords(container){
+    if (revealed.has(container)) return;
+    revealed.add(container);
+    container.querySelectorAll('.reveal.word').forEach(function(w){ w.classList.add('in'); });
+  }
+
+  var io = supportsIO ? new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      var el = e.target;
+      if (el.classList.contains('reveal')) markVisible(el); else revealWords(el);
+      io.unobserve(el);
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:.1}) : null;
+
+  function group(containerSel, itemSel, opts){
+    opts = opts || {};
+    var stag = opts.stagger || 0.06, cap = opts.cap == null ? 999 : opts.cap;
+    document.querySelectorAll(containerSel).forEach(function(container){
+      var items = itemSel ? container.querySelectorAll(itemSel) : [container];
+      items.forEach(function(el, i){
+        el.classList.add('reveal');
+        el.style.setProperty('--d', (Math.min(i, cap) * stag).toFixed(3) + 's');
+        if (io) io.observe(el); else markVisible(el);
+      });
+    });
+  }
+
+  /* splits an element's text into masked, individually-staggered words —
+     the "fancy" reveal for headlines, leads, quotes and body copy.
+     Screen readers get the plain original sentence via aria-label. */
+  function splitWords(el){
+    var full = el.textContent;
+    el.setAttribute('aria-label', full);
+    var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+    var nodes = [], n;
+    while ((n = walker.nextNode())) nodes.push(n);
+    var wi = 0;
+    nodes.forEach(function(node){
+      var parts = node.textContent.split(/(\s+)/);
+      var frag = document.createDocumentFragment();
+      parts.forEach(function(part){
+        if (part === '') return;
+        if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+        var outer = document.createElement('span');
+        outer.className = 'split-line';
+        outer.setAttribute('aria-hidden', 'true');
+        var inner = document.createElement('span');
+        inner.className = 'reveal word';
+        inner.textContent = part;
+        inner.style.setProperty('--d', (Math.min(wi, 30) * 0.018).toFixed(3) + 's');
+        wi++;
+        outer.appendChild(inner);
+        frag.appendChild(outer);
+      });
+      node.parentNode.replaceChild(frag, node);
+    });
+  }
+
+  function textReveal(selector){
+    document.querySelectorAll(selector).forEach(function(el){
+      splitWords(el);
+      if (io) io.observe(el); else revealWords(el);
+    });
+  }
+
+  try {
+    group('section:not(.hero) .eyebrow', null, {});
+
+    textReveal('#brief h2');
+    textReveal('#brief .lead');
+    textReveal('#brief > .wrap > div:not(.numbers) > p:not(.lead)');
+    textReveal('#themes > .wrap > h2');
+    textReveal('.theme h3');
+    textReveal('.theme p');
+    textReveal('#voices > .wrap > h2');
+    textReveal('.q blockquote');
+    textReveal('#day > .wrap > h2');
+    textReveal('#room > .wrap > h2');
+    textReveal('#slides > .wrap > h2');
+    textReveal('#partners > .wrap > h2');
+
+    group('.numbers', ':scope > div', {stagger:.06});
+    group('.theme .who', ':scope > a', {stagger:.04, cap:6});
+    group('#themes .themes', ':scope > article > aside > .evidence', {stagger:.12});
+    group('.quotes', ':scope > figure > figcaption', {stagger:.03, cap:10});
+    group('.stage', ':scope > ol > li', {stagger:.045, cap:10});
+    group('.tables', ':scope > h3', {stagger:0});
+    group('.tables ul', ':scope > li', {stagger:.035, cap:10});
+    group('.gallery', ':scope > figure', {stagger:.035, cap:12});
+    group('.decks', ':scope > figure', {stagger:.07});
+    group('.plist', ':scope > a', {stagger:.08});
+    group('.partners', ':scope > span', {stagger:.025, cap:14});
+    group('.next', ':scope > a', {stagger:.08});
+    group('.sources', ':scope > li', {stagger:.03, cap:12});
+    group('footer', null, {});
+  } catch (err) {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* safety net: never leave anything stuck invisible */
+  setTimeout(function(){
+    document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ el.classList.add('in'); });
+  }, 3000);
+})();
+</script>
+</body>
+</html>
