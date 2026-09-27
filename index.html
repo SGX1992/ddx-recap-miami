@@ -48,7 +48,7 @@ section:first-of-type{border-top:0}
 
 /* hero */
 .hero{position:relative;isolation:isolate;overflow:hidden;min-height:min(78vh,720px);display:flex;flex-direction:column;justify-content:flex-end;border-top:0}
-.hero__img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.hero__img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:50% 18%}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,5,5,.35) 0%,rgba(5,5,5,.05) 40%,rgba(5,5,5,.72) 78%,var(--bg) 100%)}
 .hero .wrap{padding-top:120px;padding-bottom:40px;width:100%}
 .hero h1{margin-top:16px;font-size:clamp(54px,11.5vw,150px);line-height:.86;font-weight:700;letter-spacing:-.045em;text-transform:uppercase}
@@ -82,7 +82,7 @@ section:first-of-type{border-top:0}
 .theme .who{margin-top:16px;display:flex;flex-wrap:wrap;gap:6px}
 .theme .who a{display:inline-flex;align-items:center;gap:7px;padding:5px 10px 5px 5px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--text-dim);text-decoration:none}
 .theme .who a:hover{border-color:rgba(255,255,255,.4);color:#fff}
-.theme .who img{width:22px;height:22px;border-radius:50%;object-fit:cover;background:#000}
+.theme .who img{width:22px;height:22px;border-radius:50%;object-fit:cover;object-position:50% 30%;background:#000}
 .evidence{border-left:2px solid var(--accent);padding-left:18px;align-self:start}
 .evidence .k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
 .evidence .n{margin-top:10px;font-size:clamp(40px,5vw,64px);line-height:.95;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
@@ -101,7 +101,7 @@ section:first-of-type{border-top:0}
 .q blockquote::before{content:"“";color:var(--accent);margin-right:2px}
 .q blockquote::after{content:"”";color:var(--accent);margin-left:2px}
 .q figcaption{margin-top:18px;display:flex;align-items:center;gap:12px}
-.q figcaption img{width:52px;height:52px;border-radius:50%;object-fit:cover;background:#000;flex:0 0 auto}
+.q figcaption img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:50% 30%;background:#000;flex:0 0 auto}
 .q figcaption b{display:block;font-size:14px;font-weight:600}
 .q figcaption span{display:block;font-size:12px;color:var(--text-dim);margin-top:2px}
 .q.big{column-span:all;padding:40px 36px;border-color:rgba(var(--accent-rgb),.35);background:linear-gradient(180deg,rgba(var(--accent-rgb),.06),transparent)}
@@ -128,7 +128,7 @@ section:first-of-type{border-top:0}
 /* gallery */
 .gallery{margin-top:40px;display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(110px,14vw,190px);gap:8px}
 .gallery figure{overflow:hidden;background:#000;position:relative}
-.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.gallery img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;transition:transform .5s ease}
 .gallery figure:hover img{transform:scale(1.03)}
 .gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:10px 12px;font-size:12px;line-height:1.35;color:#fff;background:linear-gradient(0deg,rgba(0,0,0,.72),transparent)}
 .gallery .w3{grid-column:span 3}.gallery .w2{grid-column:span 2}.gallery .w4{grid-column:span 4}.gallery .h2{grid-row:span 2}
@@ -214,22 +214,10 @@ footer img{width:64px}
 
 /* from the decks */
 .decks{margin-top:44px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.slide{display:flex;flex-direction:column;background:#000;border:1px solid var(--line)}
-.slide__body{aspect-ratio:16/9;padding:clamp(18px,2.4vw,34px);display:flex;flex-direction:column;justify-content:center;font-weight:700;letter-spacing:-.02em;line-height:1.08;font-size:clamp(18px,1.9vw,26px)}
-.slide__body em{font-style:normal;color:var(--accent)}
-.slide__body .big{font-size:clamp(22px,2.3vw,32px)}
-.slide__body ol{margin-top:14px;padding-left:1.2em;font-weight:400;font-size:.72em;line-height:1.4;color:rgba(255,255,255,.85)}
-.slide__body .small-k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:4px}
-.slide__body .attr{margin-top:14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim);font-weight:600}
-.slide__body .steps{list-style:none;padding:0;margin:0;font-size:.62em;line-height:1.3;display:grid;gap:5px}
-.slide__body .steps b{color:var(--accent);text-transform:uppercase;letter-spacing:.12em;font-size:.85em;margin-right:6px}
-.s-meghan .slide__body{font-family:var(--font)}
-.s-cassie .slide__body{background:#f4f3ef;color:#111}
-.s-cassie .slide__body ol{color:#1c3f95;font-family:var(--serif);font-size:.85em}
-.s-gleb .slide__body{background:#0a0a0a;font-size:clamp(17px,1.7vw,23px)}
-.s-gleb .slide__body em{color:#8f8cff}
-.s-sures .slide__body{background:#000}
-.s-ddx .slide__body{background:#050505;border-top:2px solid var(--accent)}
+.slide{display:flex;flex-direction:column;background:#000;border:1px solid var(--line);margin:0}
+.slide img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#0a0a0a}
+.slide--stage img{object-position:50% 40%}
+.slide figcaption i{font-style:normal;color:var(--accent)}
 .slide figcaption{padding:10px 14px 12px;font-size:12px;color:var(--text-dim);border-top:1px solid var(--line-soft);line-height:1.4}
 .slide figcaption b{color:#fff;font-weight:600}
 .slide{transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .35s ease}
@@ -259,7 +247,7 @@ footer img{width:64px}
     <a href="https://www.ddxconference.com/miami"><img class="brand-mark" src="assets/img/ddx-wordmark.png" alt="DDX"></a>
     <span class="top__title">Miami ’26 · Conference Report</span>
     <nav>
-      <a href="#brief">In brief</a><a href="#themes">Themes</a><a href="#slides">From the decks</a><a href="#voices">Voices</a><a href="#day">The day</a><a href="#room">The room</a><a href="#partners">Partners</a>
+      <a href="#brief">In brief</a><a href="#room">The room</a><a href="#themes">Themes</a><a href="#slides">From the decks</a><a href="#voices">Voices</a><a href="#day">The day</a><a href="#partners">Partners</a>
     </nav>
   </div>
 </header>
@@ -296,8 +284,33 @@ footer img{width:64px}
       <div><strong>2</strong><span>Workshops</span></div>
       <div><strong>6</strong><span>Table talks</span></div>
       <div><strong>1</strong><span>Digital keynote from London</span></div>
-      <div class="hi"><strong>100+</strong><span>Leaders in the room</span></div>
+      <div class="hi"><strong>7</strong><span>Talks &amp; keynotes</span></div>
       <div><strong>4,000+</strong><span>DDX alumni worldwide</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="room">
+  <div class="wrap">
+    <div class="eyebrow"><i></i><span>The room</span><span>Friday at The LAB Miami</span></div>
+    <h2>Who was there, and what it looked like</h2>
+    <div class="gallery">
+      <figure class="w4 h2"><img src="assets/img/photos/DSC6639.jpg" alt="Cassie McDaniel on the main stage beside a slide reading You can make decisions without data" loading="lazy"><figcaption>Cassie McDaniel: you can make decisions without data. Feels, reason, data.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6685.jpg" alt="The main stage and audience during the agentic-design panel" loading="lazy"><figcaption>The main stage during the agentic-design panel.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6606.jpg" alt="Meghan Preiss walking on stage under her title slide" loading="lazy"><figcaption>Meghan Preiss takes the stage for Personal Isn’t Human.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6626.jpg" alt="Meghan Preiss with the slide Nobody designed that, somebody left room for it" loading="lazy"><figcaption>“Nobody designed that. Somebody left room for it.”</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6632.jpg" alt="Cassie McDaniel presenting in front of a bookshop photograph" loading="lazy"><figcaption>Cassie McDaniel on writing, reading and deciding.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6597.jpg" alt="The audience at The LAB Miami" loading="lazy"><figcaption>The room at The LAB Miami.</figcaption></figure>
+      <figure class="w3"><img src="assets/img/photos/DSC6688.jpg" alt="Monica Girel, Meghan Preiss and Gleb Kuznetsov on the agentic-design panel" loading="lazy"><figcaption>The Future of Leading Design in an Agentic World: Monica Girel, Meghan Preiss and Gleb Kuznetsov with Sebastian Gier.</figcaption></figure>
+      <figure class="w3"><img src="assets/img/photos/DSC6700.jpg" alt="Amit Patel on the main screen, speaking from London" loading="lazy"><figcaption>Amit Patel joins from London with a global view of design events.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6657.jpg" alt="Attendees at the Askable table" loading="lazy"><figcaption>Askable’s table: Streams, and a vacation to win.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6793.jpg" alt="An attendee at the Friends of Figma Miami banner" loading="lazy"><figcaption>Friends of Figma Miami, in the room all day.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6691.jpg" alt="Lunch at the University of Miami School of Communication table" loading="lazy"><figcaption>Lunch by the University of Miami School of Communication corner.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6728.jpg" alt="A speaker leading a table talk" loading="lazy"><figcaption>Table talks ran through every break, two at a time.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6737.jpg" alt="Attendees in conversation under the More Human, Not Less panel slide" loading="lazy"><figcaption>Between sessions, under the More Human, Not Less line-up.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6773.jpg" alt="A table talk host at the Friends of Figma corner" loading="lazy"><figcaption>Late-afternoon table talk by the Friends of Figma banner.</figcaption></figure>
+      <figure class="w3"><img src="assets/img/photos/DSC6797.jpg" alt="Gleb Kuznetsov presenting The Last Screen" loading="lazy"><figcaption>Gleb Kuznetsov: the last thing you shipped, what does it do when you’re not interacting with it?</figcaption></figure>
+      <figure class="w3"><img src="assets/img/photos/DSC6603.jpg" alt="Sebastian Gier running the Meet someone new exercise" loading="lazy"><figcaption>Two minutes to meet someone new, before the first coffee was cold.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -397,47 +410,47 @@ footer img{width:64px}
 
 <section id="slides">
   <div class="wrap">
-    <div class="eyebrow"><i></i><span>From the decks</span><span>Slides the room photographed, reset in type</span></div>
-    <h2>Seven slides worth keeping</h2>
+    <div class="eyebrow"><i></i><span>From the decks</span><span>Screenshots from the speakers’ presentations</span></div>
+    <h2>Nine frames worth keeping</h2>
     <div class="decks">
-      <figure class="slide s-meghan">
-        <div class="slide__body"><p>Individually better.<br><em>Collectively the same.</em></p></div>
+      <figure class="slide">
+        <img src="assets/img/slides/host-6.jpg" alt="Slide: The world is more designable than ever. — Mark Rolston" loading="lazy">
+        <figcaption><b>Sebastian Gier</b> · Welcome · <i>the line the day opened on</i></figcaption>
+      </figure>
+      <figure class="slide">
+        <img src="assets/img/slides/meghan-27.jpg" alt="Slide: Individually better. Collectively the same." loading="lazy">
         <figcaption><b>Meghan Preiss</b> · Personal Isn’t Human · slide 27 of 111</figcaption>
       </figure>
-      <figure class="slide s-meghan">
-        <div class="slide__body"><p>Let the machines be personal.<br><em>Let people be human.</em></p></div>
+      <figure class="slide">
+        <img src="assets/img/slides/sures-6.jpg" alt="Slide: proactive pattern detection — burn ticked up 8%, you stopped cooking, sleep dropped, Maya went quiet. These are correlated." loading="lazy">
+        <figcaption><b>Sures Kumar</b> · Six Months of Giving an AI Agent My Whole Life · slide 6 of 35</figcaption>
+      </figure>
+      <figure class="slide">
+        <img src="assets/img/slides/meghan-94.jpg" alt="Slide: Let the machines be personal. Let people be human." loading="lazy">
         <figcaption><b>Meghan Preiss</b> · Personal Isn’t Human · slide 94</figcaption>
       </figure>
-      <figure class="slide s-cassie">
-        <div class="slide__body"><p class="big">You can make decisions without data.</p><ol><li>Feels</li><li>Reason</li><li>Data</li></ol></div>
-        <figcaption><b>Cassie McDaniel</b> · Feel It: Why Design Should Be Closer to Decision-Making</figcaption>
+      <figure class="slide">
+        <img src="assets/img/slides/sures-34.jpg" alt="Slide: Detach, Focus, Align, Delegate, Audit — five rules for living with an agent" loading="lazy">
+        <figcaption><b>Sures Kumar</b> · <i>the five rules</i> · slide 34 of 35</figcaption>
       </figure>
-      <figure class="slide s-sures">
-        <div class="slide__body">
-          <ol class="steps">
-            <li><b>Detach</b> Don’t give it a name. You keep auditing something instead of trusting someone.</li>
-            <li><b>Focus</b> Start with one domain. Finances, then health, then people.</li>
-            <li><b>Align</b> Have long conversations with no task attached.</li>
-            <li><b>Delegate</b> Hand over only tasks you already know how to do.</li>
-            <li><b>Audit</b> Read its thinking trace as a habit, not an investigation.</li>
-          </ol>
-        </div>
-        <figcaption><b>Sures Kumar</b> · Six Months of Giving an AI Agent My Whole Life · slide 34 of 35</figcaption>
+      <figure class="slide slide--stage">
+        <img src="assets/img/photos/DSC6639.jpg" alt="Cassie McDaniel presenting on the main stage" loading="lazy">
+        <figcaption><b>Cassie McDaniel</b> · Feel It · <i>Feels → Reason → Data</i> · from the stage</figcaption>
       </figure>
-      <figure class="slide s-meghan">
-        <div class="slide__body"><p class="small-k">Three questions for Monday</p><ol><li>Where are we resolving a tension we should hold?</li><li>Who’s allowed to say yes?</li><li>Where is the room?</li></ol></div>
-        <figcaption><b>Meghan Preiss</b> · Personal Isn’t Human · slide 103</figcaption>
+      <figure class="slide">
+        <img src="assets/img/slides/meghan-103.jpg" alt="Slide: Where are we resolving a tension we should hold? Who’s allowed to say yes? Where is the room?" loading="lazy">
+        <figcaption><b>Meghan Preiss</b> · <i>three questions for Monday</i> · slide 103</figcaption>
       </figure>
-      <figure class="slide s-gleb">
-        <div class="slide__body"><p>The last thing you shipped.<br><em>What does it do when we’re not interacting with it?</em></p></div>
-        <figcaption><b>Gleb Kuznetsov</b> · The Last Screen · a question before we start</figcaption>
+      <figure class="slide">
+        <img src="assets/img/slides/sures-21.jpg" alt="Slide: Latency Lab — reply speed over time for one thread, with spend and milestones" loading="lazy">
+        <figcaption><b>Sures Kumar</b> · <i>Latency Lab</i> · the texture of one thread · slide 21</figcaption>
       </figure>
-      <figure class="slide s-ddx">
-        <div class="slide__body"><p>The world is more designable <em>than ever.</em></p><span class="attr">Mark Rolston</span></div>
-        <figcaption><b>Sebastian Gier</b> · Welcome · the line the day opened on</figcaption>
+      <figure class="slide slide--stage">
+        <img src="assets/img/photos/DSC6797.jpg" alt="Gleb Kuznetsov on stage during The Last Screen" loading="lazy">
+        <figcaption><b>Gleb Kuznetsov</b> · The Last Screen · <i>what does it do when we’re not interacting with it?</i> · from the stage</figcaption>
       </figure>
     </div>
-    <p class="small" style="margin-top:22px">Slide text reproduced from the speakers’ decks as shared with DDX; layouts are the report’s, not the originals. Meghan Preiss also cited Doshi &amp; Hauser (Science Advances, 2024): stories written with AI help were 10.7% more similar to each other than stories written without it.</p>
+    <p class="small" style="margin-top:22px">Slides reproduced from the decks the speakers shared with DDX. Cassie McDaniel and Gleb Kuznetsov presented from Keynote and Figma, so their frames are stage photographs. Meghan Preiss also cited Doshi &amp; Hauser (Science Advances, 2024): stories written with AI help were 10.7% more similar to each other than stories written without it.</p>
   </div>
 </section>
 
@@ -562,30 +575,6 @@ footer img{width:64px}
   </div>
 </section>
 
-<section id="room">
-  <div class="wrap">
-    <div class="eyebrow"><i></i><span>The room</span><span>Friday at The LAB Miami</span></div>
-    <h2>Who was there, and what it looked like</h2>
-    <div class="gallery">
-      <figure class="w4 h2"><img src="assets/img/photos/DSC6639.jpg" alt="Cassie McDaniel on the main stage beside a slide reading You can make decisions without data" loading="lazy"><figcaption>Cassie McDaniel: you can make decisions without data. Feels, reason, data.</figcaption></figure>
-      <figure class="w2"><img src="assets/img/photos/DSC6685.jpg" alt="The main stage and audience during the agentic-design panel" loading="lazy"><figcaption>The main stage during the agentic-design panel.</figcaption></figure>
-      <figure class="w2"><img src="assets/img/photos/DSC6606.jpg" alt="Meghan Preiss walking on stage under her title slide" loading="lazy"><figcaption>Meghan Preiss takes the stage for Personal Isn’t Human.</figcaption></figure>
-      <figure class="w2"><img src="assets/img/photos/DSC6626.jpg" alt="Meghan Preiss with the slide Nobody designed that, somebody left room for it" loading="lazy"><figcaption>“Nobody designed that. Somebody left room for it.”</figcaption></figure>
-      <figure class="w2"><img src="assets/img/photos/DSC6632.jpg" alt="Cassie McDaniel presenting in front of a bookshop photograph" loading="lazy"><figcaption>Cassie McDaniel on writing, reading and deciding.</figcaption></figure>
-      <figure class="w2"><img src="assets/img/photos/DSC6597.jpg" alt="The audience at The LAB Miami" loading="lazy"><figcaption>The room at The LAB Miami.</figcaption></figure>
-      <figure class="w3"><img src="assets/img/photos/DSC6688.jpg" alt="Monica Girel, Meghan Preiss and Gleb Kuznetsov on the agentic-design panel" loading="lazy"><figcaption>The Future of Leading Design in an Agentic World: Monica Girel, Meghan Preiss and Gleb Kuznetsov with Sebastian Gier.</figcaption></figure>
-      <figure class="w3"><img src="assets/img/photos/DSC6700.jpg" alt="Amit Patel on the main screen, speaking from London" loading="lazy"><figcaption>Amit Patel joins from London with a global view of design events.</figcaption></figure>
-      <figure class="w2"><img src="assets/img/photos/DSC6657.jpg" alt="Attendees at the Askable table" loading="lazy"><figcaption>Askable’s table: Streams, and a vacation to win.</figcaption></figure>
-      <figure class="w2"><img src="assets/img/photos/DSC6793.jpg" alt="An attendee at the Friends of Figma Miami banner" loading="lazy"><figcaption>Friends of Figma Miami, in the room all day.</figcaption></figure>
-      <figure class="w2"><img src="assets/img/photos/DSC6691.jpg" alt="Lunch at the University of Miami School of Communication table" loading="lazy"><figcaption>Lunch by the University of Miami School of Communication corner.</figcaption></figure>
-      <figure class="w2"><img src="assets/img/photos/DSC6728.jpg" alt="A speaker leading a table talk" loading="lazy"><figcaption>Table talks ran through every break, two at a time.</figcaption></figure>
-      <figure class="w2"><img src="assets/img/photos/DSC6737.jpg" alt="Attendees in conversation under the More Human, Not Less panel slide" loading="lazy"><figcaption>Between sessions, under the More Human, Not Less line-up.</figcaption></figure>
-      <figure class="w2"><img src="assets/img/photos/DSC6773.jpg" alt="A table talk host at the Friends of Figma corner" loading="lazy"><figcaption>Late-afternoon table talk by the Friends of Figma banner.</figcaption></figure>
-      <figure class="w3"><img src="assets/img/photos/DSC6797.jpg" alt="Gleb Kuznetsov presenting The Last Screen" loading="lazy"><figcaption>Gleb Kuznetsov: the last thing you shipped, what does it do when you’re not interacting with it?</figcaption></figure>
-      <figure class="w3"><img src="assets/img/photos/DSC6603.jpg" alt="Sebastian Gier running the Meet someone new exercise" loading="lazy"><figcaption>Two minutes to meet someone new, before the first coffee was cold.</figcaption></figure>
-    </div>
-  </div>
-</section>
 
 <section id="partners">
   <div class="wrap">
