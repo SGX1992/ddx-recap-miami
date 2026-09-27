@@ -48,8 +48,10 @@ section:first-of-type{border-top:0}
 
 /* hero */
 .hero{position:relative;isolation:isolate;overflow:hidden;min-height:min(78vh,720px);display:flex;flex-direction:column;justify-content:flex-end;border-top:0}
-.hero__img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:50% 18%}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,5,5,.35) 0%,rgba(5,5,5,.05) 40%,rgba(5,5,5,.72) 78%,var(--bg) 100%)}
+.hero__img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:64% 30%}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(5,5,5,.78) 0%,rgba(5,5,5,.5) 38%,rgba(5,5,5,.08) 70%,rgba(5,5,5,0) 100%),linear-gradient(180deg,rgba(5,5,5,.35) 0%,rgba(5,5,5,.05) 40%,rgba(5,5,5,.72) 78%,var(--bg) 100%)}
+@media (max-width:700px){.hero .eyebrow{flex-wrap:wrap;row-gap:6px;letter-spacing:.2em;font-size:11px}.hero .eyebrow span{white-space:nowrap}.hero__credit{display:none}}
+@media (max-width:700px){.hero::before{background:linear-gradient(180deg,rgba(5,5,5,.45) 0%,rgba(5,5,5,.35) 30%,rgba(5,5,5,.78) 70%,var(--bg) 100%)}}
 .hero .wrap{padding-top:120px;padding-bottom:40px;width:100%}
 .hero h1{margin-top:16px;font-size:clamp(54px,11.5vw,150px);line-height:.86;font-weight:700;letter-spacing:-.045em;text-transform:uppercase}
 .hero h1 em{font-style:normal;color:var(--accent)}
@@ -254,7 +256,7 @@ footer img{width:64px}
 <div id="progress" aria-hidden="true"></div>
 
 <section class="hero">
-  <img class="hero__img" src="assets/img/photos/hero.jpg" alt="Sebastian Gier opening DDX'26 Miami on the main stage at The LAB Miami" fetchpriority="high">
+  <img class="hero__img" src="assets/img/photos/hero.jpg" alt="A full room at The LAB Miami for the agentic-design panel with Monica Girel, Meghan Preiss, Gleb Kuznetsov and Sebastian Gier" fetchpriority="high">
   <span class="hero__credit">Photos · DDX Miami</span>
   <div class="wrap">
     <div class="eyebrow"><i></i><span>Conference report</span><span>24–25 September 2026</span></div>
@@ -296,7 +298,7 @@ footer img{width:64px}
     <h2>Who was there, and what it looked like</h2>
     <div class="gallery">
       <figure class="w4 h2"><img src="assets/img/photos/DSC6639.jpg" alt="Cassie McDaniel on the main stage beside a slide reading You can make decisions without data" loading="lazy"><figcaption>Cassie McDaniel: you can make decisions without data. Feels, reason, data.</figcaption></figure>
-      <figure class="w2"><img src="assets/img/photos/DSC6685.jpg" alt="The main stage and audience during the agentic-design panel" loading="lazy"><figcaption>The main stage during the agentic-design panel.</figcaption></figure>
+      <figure class="w2"><img src="assets/img/photos/DSC6631.jpg" alt="Meghan Preiss on the main stage: Today is the inflection point" loading="lazy"><figcaption>Meghan Preiss: “Today is the inflection point.”</figcaption></figure>
       <figure class="w2"><img src="assets/img/photos/DSC6606.jpg" alt="Meghan Preiss walking on stage under her title slide" loading="lazy"><figcaption>Meghan Preiss takes the stage for Personal Isn’t Human.</figcaption></figure>
       <figure class="w2"><img src="assets/img/photos/DSC6626.jpg" alt="Meghan Preiss with the slide Nobody designed that, somebody left room for it" loading="lazy"><figcaption>“Nobody designed that. Somebody left room for it.”</figcaption></figure>
       <figure class="w2"><img src="assets/img/photos/DSC6632.jpg" alt="Cassie McDaniel presenting in front of a bookshop photograph" loading="lazy"><figcaption>Cassie McDaniel on writing, reading and deciding.</figcaption></figure>
