@@ -12,7 +12,7 @@ Five things the room agreed on:
 4. The best design system is one AI can't forget to use.
 5. Research at the scale of the business, judgment in the loop.
 
-Each one is backed by a 2026 figure in the slides, from BCG, Stanford HAI, Maze, the Designer Fund and the research Meghan Preiss cited on stage.
+Each one is backed by a 2026 figure in the slides, from BCG, Menlo Ventures, Maze, the Designer Fund and the research Meghan Preiss cited on stage.
 
 Thank you to every speaker: Meghan Preiss, Cassie McDaniel, Monica Girel, Gleb Kuznetsov, Sures Kumar, Amit Patel, Ivan Barriga, Jonathan Ruiz, Dianne Alter, Raul Justiniano, Elizabeth Reme, Liz Steelman, Beto Navarro, Coral Miniel, Abhilash Kolapareddy, Shaivi Ganatra, Jonathan Montalvo and Anastasiia Leliakova. And to our partners the University of Miami, Askable, Friends of Figma Miami and The LAB Miami.
 
