@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DDX'26 Miami — Recap carousel</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tinos:ital@1&display=swap">
+<style>
+@page{size:1080px 1350px;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#050505;--line:#242424;--y:#FFF204;--dim:#9A9A9A;--faint:#5C5C5C;--font:"Helvetica Neue",Helvetica,Arial,sans-serif;--serif:Tinos,"Times New Roman",serif}
+html,body{background:var(--bg);color:#fff;font-family:var(--font);-webkit-font-smoothing:antialiased;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+img{display:block;max-width:100%}
+.s{position:relative;width:1080px;height:1350px;overflow:hidden;page-break-after:always;break-after:page;padding:80px 72px 150px;display:flex;flex-direction:column;background:var(--bg)}
+.s:last-child{break-after:auto;page-break-after:auto}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:19px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--y)}
+.eyebrow i{width:26px;height:3px;background:var(--y)}
+.eyebrow span+span{color:rgba(255,255,255,.6)}
+h1{font-size:118px;line-height:.9;letter-spacing:-.04em;font-weight:700;text-transform:uppercase;margin-top:26px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--y)}
+h2{font-size:82px;line-height:.98;letter-spacing:-.035em;font-weight:700;margin-top:28px;text-wrap:balance}
+h2 span{color:var(--y)}
+p.body{margin-top:34px;font-size:30px;line-height:1.42;color:rgba(255,255,255,.8);text-wrap:pretty}
+.foot{position:absolute;left:72px;right:72px;bottom:56px;display:flex;justify-content:space-between;align-items:center;font-size:17px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+.foot img{width:72px}
+.foot .swipe{color:var(--y)}
+/* cover */
+.cover{padding:0;justify-content:flex-end}
+.cover img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:74% 40%}
+.cover::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,5,5,.3),rgba(5,5,5,.05) 35%,rgba(5,5,5,.85) 72%,#050505)}
+.cover .in{position:relative;padding:0 72px 96px}
+.cover .mark{position:absolute;top:72px;left:72px;width:150px}
+.cover h1{font-size:160px;line-height:.84}
+.cover .meta{margin-top:30px;font-size:26px;line-height:1.4;color:rgba(255,255,255,.85)}
+.cover .meta b{color:#fff}
+/* numbers */
+.numbers{margin-top:60px;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.numbers div{padding:44px 36px 40px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.numbers strong{display:block;font-size:130px;line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.numbers span{display:block;margin-top:16px;font-size:20px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.numbers .hi strong{color:var(--y)}
+/* theme */
+.theme .stat{margin-top:auto;border-left:4px solid var(--y);padding-left:30px}
+.theme .stat .k{font-size:18px;letter-spacing:.2em;text-transform:uppercase;color:var(--y)}
+.theme .stat .n{margin-top:12px;font-size:150px;line-height:.95;letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.theme .stat .n small{font-size:.5em;color:var(--dim)}
+.theme .stat .t{margin-top:16px;font-size:26px;line-height:1.4;color:rgba(255,255,255,.82);max-width:34ch}
+.theme .stat .src{margin-top:10px;font-size:18px;color:var(--faint)}
+.theme .lower{flex:1;min-height:0;margin-top:44px;margin-right:-72px;display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:40px}
+.theme .lower .stat{margin-top:0;align-self:end}
+.theme .lower .stat .n{font-size:118px}
+.theme .shot{position:relative;margin:0;overflow:hidden;background:#000}
+.theme .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.theme .shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:48px 26px 20px;font-size:17px;line-height:1.35;color:rgba(255,255,255,.92);background:linear-gradient(0deg,rgba(0,0,0,.8),transparent)}
+.who{margin-top:36px;display:flex;gap:-10px}
+.who img{width:104px;height:104px;border-radius:50%;object-fit:cover;background:#000;border:4px solid var(--bg);margin-right:-18px}
+.who .names{align-self:center;margin-left:34px;font-size:22px;line-height:1.35;color:var(--dim)}
+/* quote */
+.quote blockquote{margin-top:auto;margin-bottom:auto;font-family:var(--serif);font-style:italic;font-size:64px;line-height:1.2;text-wrap:pretty}
+.quote blockquote::before{content:"“";color:var(--y)}
+.quote blockquote::after{content:"”";color:var(--y)}
+.quote .cap{display:flex;align-items:center;gap:26px;margin-bottom:60px}
+.quote .cap img{width:130px;height:130px;border-radius:50%;object-fit:cover;background:#000}
+.quote .cap b{display:block;font-size:30px}
+.quote .cap span{display:block;font-size:22px;color:var(--dim);margin-top:6px}
+/* photos */
+.grid{margin-top:48px;display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:296px;gap:12px}
+.grid figure{overflow:hidden;background:#000}
+.grid img{width:100%;height:100%;object-fit:cover}
+.grid .w2{grid-column:span 2}
+/* next */
+.next{margin-top:auto;display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
+.next div{display:flex;justify-content:space-between;align-items:baseline;padding:30px 0;border-bottom:1px solid var(--line)}
+.next b{font-size:60px;letter-spacing:-.03em;text-transform:uppercase}
+.next span{font-size:24px;color:var(--dim)}
+.next .cta{background:var(--y);color:#000;padding:30px 28px;margin-top:20px;border:0}
+.next .cta span{color:rgba(0,0,0,.65)}
+.logos{margin-top:44px;display:flex;flex-wrap:wrap;align-items:center;gap:36px 44px}
+.logos img{height:38px;width:auto}
+.logos img.tall{height:62px}
+.logos img.short{height:30px}
+.logos .fof{display:flex;align-items:center;gap:12px}
+.logos .fof img{height:52px}
+.logos .fof img+img{height:30px}
+.logos .fof em{font-style:normal;font-size:18px;letter-spacing:.14em;text-transform:uppercase;color:var(--y);font-weight:700}
+.logos img.um{height:78px}
+</style>
+</head>
+<body>
+
+<!-- 1 cover -->
+<section class="s cover">
+  <img class="bg" src="assets/img/photos/hero.jpg" alt="">
+  <img class="mark" src="assets/img/ddx-wordmark.png" alt="DDX">
+  <div class="in">
+    <div class="eyebrow"><i></i><span>Recap</span><span>Miami · 24–25 Sep 2026</span></div>
+    <h1>The<br>Inflection<br><em>Point</em></h1>
+    <p class="meta"><b>DDX’26 Miami.</b> 19 design and product leaders, one question: if every competitor runs on the same AI, what makes yours worth choosing?</p>
+  </div>
+</section>
+
+<!-- 2 numbers -->
+<section class="s">
+  <div class="eyebrow"><i></i><span>The days</span></div>
+  <h2>Two days.<br>Two venues.<br><span>One question.</span></h2>
+  <div class="numbers">
+    <div class="hi"><strong>19</strong><span>Speakers</span></div>
+    <div><strong>7</strong><span>Talks &amp; keynotes</span></div>
+    <div><strong>3</strong><span>Panels</span></div>
+    <div><strong>6</strong><span>Table talks</span></div>
+  </div>
+  <div class="foot"><img src="assets/img/ddx-wordmark.png" alt=""><span>DDX’26 Miami</span><span class="swipe">Swipe →</span></div>
+</section>
+
+<!-- 3 photos -->
+<section class="s">
+  <div class="eyebrow"><i></i><span>The room</span></div>
+  <h2>Thank you, <span>Miami.</span></h2>
+  <div class="grid">
+    <figure class="w2"><img src="assets/img/photos/DSC6597.jpg" alt=""></figure>
+    <figure><img src="assets/img/photos/DSC6657.jpg" alt=""></figure>
+    <figure><img src="assets/img/photos/DSC6793.jpg" alt=""></figure>
+    <figure class="w2"><img src="assets/img/photos/DSC6691.jpg" alt=""></figure>
+  </div>
+  <div class="foot"><img src="assets/img/ddx-wordmark.png" alt=""><span>The LAB Miami · University of Miami</span><span class="swipe">Swipe →</span></div>
+</section>
+
+<!-- 4 theme 1 -->
+<section class="s theme">
+  <div class="eyebrow"><i></i><span>Takeaway 1 of 5</span></div>
+  <h2>Personal isn’t human. <span>Difference is the value.</span></h2>
+  <p class="body">AI makes every service individually better and collectively the same. When sameness is cheap, difference lives in interaction, in the tensions a company chooses to hold, and in the room it leaves for a person.</p>
+  <div class="who"><img src="assets/img/speakers/meghan-preiss.png" alt=""><img src="assets/img/speakers/jonathan-montalvo.png" alt=""><img src="assets/img/speakers/shaivi-ganatra.png" alt=""><img src="assets/img/speakers/anastasiia-leliakova.png" alt=""><div class="names">Meghan Preiss, Universal · Jonathan Montalvo, Plei · Shaivi Ganatra, Viveka Health · Anastasiia Leliakova, Vegas Creative</div></div>
+  <div class="lower">
+    <div class="stat"><div class="k">Cited on stage</div><div class="n">85<small>%</small></div><div class="t">would rather talk to a real person than to AI when contacting a business.</div><div class="src">AnswerConnect / OnePoll, May 2026</div></div>
+    <figure class="shot"><img src="assets/img/photos/DSC6626.jpg" alt="" style="object-position:62% 50%"><figcaption>Meghan Preiss: “Personal Isn’t Human”</figcaption></figure>
+  </div>
+  <div class="foot"><img src="assets/img/ddx-wordmark.png" alt=""><span>DDX’26 Miami</span><span class="swipe">Swipe →</span></div>
+</section>
+<!-- 5 theme 2 -->
+<section class="s theme">
+  <div class="eyebrow"><i></i><span>Takeaway 2 of 5</span></div>
+  <h2>Feel it. <span>Design belongs closer to the decision.</span></h2>
+  <p class="body">Feels, reason and data all lead to product decisions. A design team that only brings data is not in the room where the call is made, and in agentic products the question becomes who is allowed to say yes.</p>
+  <div class="who"><img src="assets/img/speakers/cassie-mcdaniel.png" alt=""><img src="assets/img/speakers/monica-girel.png" alt=""><img src="assets/img/speakers/gleb-kuznetsov.png" alt=""><img src="assets/img/speakers/sebastian-gier.webp" alt=""><div class="names">Cassie McDaniel, Medium · Monica Girel, Adobe · Gleb Kuznetsov, Brain Technologies · Sebastian Gier, DDX</div></div>
+  <div class="lower">
+    <div class="stat"><div class="k">2026 evidence</div><div class="n">72<small>%</small></div><div class="t">of CEOs now say they are the main AI decision-maker in their company, double the prior year.</div><div class="src">BCG, AI Radar 2026</div></div>
+    <figure class="shot"><img src="assets/img/photos/DSC6639.jpg" alt="" style="object-position:38% 50%"><figcaption>Cassie McDaniel: you can make decisions without data</figcaption></figure>
+  </div>
+  <div class="foot"><img src="assets/img/ddx-wordmark.png" alt=""><span>DDX’26 Miami</span><span class="swipe">Swipe →</span></div>
+</section>
+<!-- 6 theme 3 -->
+<section class="s theme">
+  <div class="eyebrow"><i></i><span>Takeaway 3 of 5</span></div>
+  <h2>Six months with an agent. <span>Detach, focus, align, delegate, audit.</span></h2>
+  <p class="body">Sures Kumar gave an agent his calendar, fifteen years of email, his finances and his lab results. Every failure fell into one of three buckets: missing context, information that can’t be captured, or bad reasoning with everything in hand.</p>
+  <div class="who"><img src="assets/img/speakers/sures-kumar.png" alt=""><img src="assets/img/speakers/gleb-kuznetsov.png" alt=""><img src="assets/img/speakers/abhilash-kolapareddy.png" alt=""><img src="assets/img/speakers/coral-miniel.png" alt=""><div class="names">Sures Kumar, Google DeepMind · Gleb Kuznetsov, Brain Technologies · Abhilash Kolapareddy, Citi · Coral Miniel, fixurfeed</div></div>
+  <div class="lower">
+    <div class="stat"><div class="k">2026 evidence</div><div class="n">20 → 77<small>%</small></div><div class="t">AI agents’ success rate on real-world tasks, in one year.</div><div class="src">Stanford HAI, 2026 AI Index</div></div>
+    <figure class="shot"><img src="assets/img/photos/DSC6797.jpg" alt="" style="object-position:62% 50%"><figcaption>Gleb Kuznetsov: what does it do when we’re not interacting with it?</figcaption></figure>
+  </div>
+  <div class="foot"><img src="assets/img/ddx-wordmark.png" alt=""><span>DDX’26 Miami</span><span class="swipe">Swipe →</span></div>
+</section>
+<!-- 7 theme 4 -->
+<section class="s theme">
+  <div class="eyebrow"><i></i><span>Takeaway 4 of 5</span></div>
+  <h2>The best design system is one <span>AI can’t forget to use.</span></h2>
+  <p class="body">Design systems are turning from documentation into living infrastructure that humans and AI both read, so generative tools inherit a company’s design language by default. The designers who win orchestrate context and taste.</p>
+  <div class="who"><img src="assets/img/speakers/ivan-barriga.png" alt=""><img src="assets/img/speakers/jonathan-ruiz.png" alt=""><img src="assets/img/speakers/dianne-alter.png" alt=""><img src="assets/img/speakers/raul-justiniano.png" alt=""><div class="names">Ivan Barriga, FlavorCloud · Jonathan Ruiz, Docusign · Dianne Alter, The Design Project · Raul Justiniano, Asurion</div></div>
+  <div class="lower">
+    <div class="stat"><div class="k">2026 evidence</div><div class="n">91<small>%</small></div><div class="t">of designers now use AI for design tasks every week, up from 54% a year earlier.</div><div class="src">Designer Fund, AI in Design 2026</div></div>
+    <figure class="shot"><img src="assets/img/photos/DSC6728.jpg" alt="" style="object-position:50% 40%"><figcaption>Table talks ran through the whole day</figcaption></figure>
+  </div>
+  <div class="foot"><img src="assets/img/ddx-wordmark.png" alt=""><span>DDX’26 Miami</span><span class="swipe">Swipe →</span></div>
+</section>
+<!-- 8 theme 5 -->
+<section class="s theme">
+  <div class="eyebrow"><i></i><span>Takeaway 5 of 5</span></div>
+  <h2>Research at the scale of the business, <span>judgment in the loop.</span></h2>
+  <p class="body">One researcher, 200,000 open-ended responses a quarter and an AI-assisted synthesis pipeline, with a human check for the costly failure: feedback that sounds identical but points to different root causes.</p>
+  <div class="who"><img src="assets/img/speakers/elizabeth-reme.png" alt=""><img src="assets/img/speakers/liz-steelman.png" alt=""><img src="assets/img/speakers/beto-navarro.png" alt=""><div class="names">Elizabeth Reme, American Express · Liz Steelman, Askable · Beto Navarro, Amazon · Friends of Figma Miami</div></div>
+  <div class="lower">
+    <div class="stat"><div class="k">2026 evidence</div><div class="n">8 → 22<small>%</small></div><div class="t">of organisations now call research essential to all levels of business strategy, nearly tripling in a year.</div><div class="src">Maze, Future of User Research 2026</div></div>
+    <figure class="shot"><img src="assets/img/photos/DSC6737.jpg" alt="" style="object-position:22% 50%"><figcaption>The closing panel on screen: More Human, Not Less</figcaption></figure>
+  </div>
+  <div class="foot"><img src="assets/img/ddx-wordmark.png" alt=""><span>DDX’26 Miami</span><span class="swipe">Swipe →</span></div>
+</section>
+
+<!-- 9 quote -->
+<section class="s quote">
+  <div class="eyebrow"><i></i><span>Heard in Miami</span></div>
+  <blockquote>The most exciting thing about this moment in design isn’t the technology — it’s that AI is forcing us to go back to first principles. The designers who thrive will be the ones who know why something should exist, not just how to make it.</blockquote>
+  <div class="cap"><img src="assets/img/speakers/beto-navarro.png" alt=""><div><b>Beto Navarro</b><span>Senior Product Designer, Amazon · Founder, Friends of Figma Miami</span></div></div>
+  <div class="foot"><img src="assets/img/ddx-wordmark.png" alt=""><span>DDX’26 Miami</span><span class="swipe">Swipe →</span></div>
+</section>
+
+<!-- 10 next -->
+<section class="s">
+  <div class="eyebrow"><i></i><span>Made possible by</span></div>
+  <div class="logos">
+    <img class="um" src="assets/img/partners/university-of-miami.png" alt="University of Miami"><img src="assets/img/partners/askable.png" alt="Askable"><span class="fof"><img src="assets/img/partners/friends-of-figma-icon.png" alt=""><img src="assets/img/partners/friends-of-figma-text.png" alt="Friends of Figma"><em>Miami</em></span><img class="tall" src="assets/img/partners/the-lab-miami.png" alt="The LAB Miami">
+  </div>
+  <h2 style="margin-top:80px">Same exchange, <span>next city.</span></h2>
+  <div class="next">
+    <div><b>Dubai</b><span>27–28 Jan 2027</span></div>
+    <div><b>Tokyo</b><span>12 Feb 2027</span></div>
+    <div class="cta"><b>Miami ’27</b><span>Join the list · ddxconference.com</span></div>
+  </div>
+  <div class="foot"><img src="assets/img/ddx-wordmark.png" alt=""><span>ddxconference.com</span><span></span></div>
+</section>
+
+</body>
+</html>
